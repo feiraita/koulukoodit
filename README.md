@@ -1,2 +1,2 @@
 # koulukoodit
-Ohjelmoinnin 
+Ohjelmointitunnin läksyt, testit yms
