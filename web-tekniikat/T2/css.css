@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #78a1bb;
+    font-family: 'Overpass', sans-serif;
+}
+
+.container {
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+    width: 40%;
+    border-radius: 20px;
+}
+
+table {
+    display: flex;
+    padding: 1vh; 
+    width: 100%;
+    background-color: #ebf2fa;
+    border-radius: 1vh;
+    table-layout: fixed;
+    box-shadow: 12px 12px 2px 1px rgba(75, 41, 149, 0.2);
+}
+
+td {
+    width: 100px;
+    text-align: center;
+}
+
+th {
+    margin-right: 1%;
+    padding: 0.5vh;
+    background-color: #acc5e3;
+    border-radius: 1vh;
+    text-align: center;
+    color: white;
+}
