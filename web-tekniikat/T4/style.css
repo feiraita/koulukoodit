@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #edede9;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header {
+    align-items: baseline;
+    width: 70%;
+    padding: 1vh 3vw 1vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 70%;
+    height: 80%;
+    margin: 2vh auto;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar li{
+    display: inline;
+}
+
+.navbar li + li {
+    margin-left: 2vh;
+}
+
+
+.content-basic, .content-characteristics{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em;
+    border: 3px solid #f5ebe0;
+    border-radius: 1em;
+}
+
+.content-basic {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.vasen-basic, .vasen-characteristics {
+    width: 60%;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 1em;
+}
+
+.vasen-basic {  
+    background-color: #ffffff;
+}
+
+.vasen-characteristics {
+    padding: 0;
+}
+
+.teksti-characteristics + .teksti-characteristics {
+    margin-top: 1em;
+}
+
+.teksti-characteristics {
+    height: 100%;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 1em;
+}
+
+.oikea-basic, .oikea-characteristics {
+    width: 35%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+    border-radius: 1em;
+}
+
+/* Alempi laatikko */
+.content-characteristics {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 560px) {
+    .header {
+        flex-flow: column wrap;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .content-characteristics, .content-basic {
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+    
+    .vasen-basic, .vasen-characteristics {
+        width: 100%;
+    }
+
+    .oikea-basic, .oikea-characteristics {
+        width: 80%;
+        height: auto;
+        padding-bottom: 1em;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        width: 100%;
+    }
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .header {
+        max-width: 1200px;
+        padding: 1vh 1vw 1vh 1vw;
+    }
+
+    .container {
+        max-width: 1200px;
+        font-size: x-large;
+    }
+}
