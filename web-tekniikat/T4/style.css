@@ -8,6 +8,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: #edede9;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 header {
@@ -16,6 +18,11 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    background-color: rgb(237,237,233, 0.7);
+}
+
+p {
+    font-weight: 400;
 }
 
 .header {
@@ -27,10 +34,32 @@ header {
     margin: 0 auto;
 }
 
+h1 {
+    color: #56473E;
+    font-weight: 600;
+    font-style: italic;
+}
+
+h3 {
+    font-weight: 600;
+    font-style: italic;
+}
+
 .container {
     max-width: 70%;
     height: 80%;
     margin: 2vh auto;
+}
+
+a {
+    color: #403d39;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #56473E;
+    font-weight: 700;
+    border-bottom: 2px solid #56473E;
 }
 
 .navbar ul {
@@ -45,16 +74,13 @@ header {
     margin-left: 2vh;
 }
 
-
 .content-basic, .content-characteristics{
     display: flex;
     height: 100%;
     width: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 1em;
-    border: 3px solid #f5ebe0;
-    border-radius: 1em;
 }
 
 .content-basic {
@@ -62,18 +88,23 @@ header {
     margin-bottom: 2em;
 }
 
-.vasen-basic, .vasen-characteristics {
+.vasen-basic, .keski-basic, .vasen-characteristics {
     width: 60%;
-    padding: 2vw;
+    padding: 2em;
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
     border-radius: 1em;
 }
 
 .vasen-basic {  
     background-color: #ffffff;
+}
+
+.keski-basic {
+    width: 100%;
+    color: #56473E;
+    margin: 0;
 }
 
 .vasen-characteristics {
@@ -86,7 +117,7 @@ header {
 
 .teksti-characteristics {
     height: 100%;
-    padding: 2vw;
+    padding: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,11 +128,12 @@ header {
 .oikea-basic, .oikea-characteristics {
     width: 35%;
     height: auto;
+    align-self: center;
 }
 
 img {
     max-width: 100%;
-    height: 100%;
+    height: auto;
     transform: scaleX(-1);
     border-radius: 1em;
 }
@@ -112,12 +144,27 @@ img {
     flex-direction: row-reverse;
 }
 
-@media only screen and (max-width: 560px) {
+
+/* Media queryt */
+@media only screen and (max-width: 300px) {
+    ul {
+        display: flex;
+        flex-flow: column;
+    }
+    .navbar li + li {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
     .header {
         flex-flow: column wrap;
         text-align: center;
         align-items: center;
-        
     }
 
     .content-characteristics, .content-basic {
@@ -129,38 +176,49 @@ img {
         width: 100%;
     }
 
+    /* Kuva */
     .oikea-basic, .oikea-characteristics {
         width: 80%;
-        height: auto;
         padding-bottom: 1em;
-        align-items: center;
     }
 }
 
+@media only screen and (max-width: 850px) {
+    body {
+        font-size: smaller;
+    }
+    .navbar li + li {
+        margin-left: 1vw;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .header {
-        width: 100%;
+        width: 80%;
     }
+    
     .container {
-        max-width: 100%;
+        max-width: 80%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    .container {
-        max-width: 70%;
+    body {
+        font-size: medium;
+    }
+
+    .vasen-basic, .keski-basic, .teksti-characteristics {
+        padding: 2vw;
     }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1400px) {
     .header {
-        max-width: 1200px;
-        padding: 1vh 1vw 1vh 1vw;
+        padding: 2vh 0 3vh 0;
+        max-width: 1000px;
     }
 
     .container {
-        max-width: 1200px;
-        font-size: x-large;
+        max-width: 1000px;
     }
 }
