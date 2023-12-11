@@ -5,9 +5,9 @@ class Footer extends HTMLElement {
   
     connectedCallback() {
       this.innerHTML = `
-      <div class="footer bg-light text-muted mt-4 pb-3">´
-        <div class="container ">
-          <div class="row fs-6 lh-sm d-flex justify-content-md-center">
+      <footer class="footer bg-light text-muted mt-2 pb-3">´
+        <div class="footer-container ">
+          <div class="row d-flex justify-content-md-center">
             <div class="col-lg-1">
               <img id="footer-logo" class="img-fluid" src="kuvat/logo.svg" alt="Yrityksen logo">
             </div>
@@ -22,7 +22,7 @@ class Footer extends HTMLElement {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
    `;
   }
 }

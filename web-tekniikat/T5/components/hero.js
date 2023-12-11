@@ -9,7 +9,7 @@ class Hero extends HTMLElement {
         <div class="container-fluid text-uppercase">
           <!-- NAVI -->
           <nav id="change" class="navbar fixed-top navbar-expand-lg">
-            <a class="navbar-brand ms-5 ps-5" href="#">
+            <a class="navbar-brand" href="#">
                 <img id="nav-logo" src="kuvat/elwell-white.svg" alt="logo">
             </a>
 
@@ -18,7 +18,7 @@ class Hero extends HTMLElement {
               <button id="sideNav-btn" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <i class="fa-solid fa-bars"></i>
               </button>
-              <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                     <a class="navbar-brand" href="#">
                         <img id="nav-logo" src="kuvat/elwell-white.svg" alt="logo">
@@ -29,40 +29,40 @@ class Hero extends HTMLElement {
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav text-white">
-                        <li id="yleista" class="nav-item">
-                        <a class="nav-link" href="index.html">Yleistä</a>
+                        <li class="yleista nav-item">
+                          <a class="nav-link" href="index.html">Yleistä</a>
                         </li>
-                        <li id="joustorahoitus" class="nav-item">
-                        <a class="nav-link" href="joustorahoitus.html">Joustorahoitus</a>
+                        <li class="joustorahoitus nav-item">
+                          <a class="nav-link" href="joustorahoitus.html">Joustorahoitus</a>
                         </li>
-                        <li id="palvelut" class="nav-item">
-                        <a class="nav-link" href="palvelut.html">Palvelut</a>
+                        <li class="palvelut nav-item">
+                          <a class="nav-link" href="palvelut.html">Palvelut</a>
                         </li>
-                        <li id="yhteystiedot" class="nav-item">
-                        <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
+                        <li class="yhteystiedot nav-item">
+                          <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
                         </li>
                     </ul>
                 </div>
               </div>
             </nav>
 
-          <div class="collapse navbar-collapse justify-content-end me-5 pe-5" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul class="navbar-nav">
-                <li id="yleista" class="nav-item">
+                <li class="yleista nav-item">
                   <a class="nav-link" href="index.html">Yleistä</a>
                 </li>
-                <li id="joustorahoitus" class="nav-item">
-                  <a class="nav-link" href="joustorahoitus.html">Joustorahoitus</a>
+                <li class="joustorahoitus nav-item">
+                  <a class="nav-link" href="joustorahoitus.html">Jousto&shy;rahoitus</a>
                 </li>
-                <li id="palvelut" class="nav-item">
+                <li class="palvelut nav-item">
                   <a class="nav-link" href="palvelut.html">Palvelut</a>
                 </li>
-                <li id="yhteystiedot" class="nav-item">
+                <li class="yhteystiedot nav-item">
                   <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
                 </li>
               </ul>
-          </div>
-      </nav>
+            </div>
+          </nav>
       
       <!-- HERO -->
       <div class="pt-5 text-white container d-flex flex-column align-items-center">
