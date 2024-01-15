@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/66d9b0828a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="components/hero.js"></script>
+    <script src="components/footer.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Etusivu</title>
+</head>
+
+<body>
+  <hero-component></hero-component>
+
+  <main id="content" class="container">
+    <!-- YLEISTÄ  -->
+    <div class="row w-100">
+      <h4>Yleistä</h4>
+      <div class="col-lg-6">
+        <p>
+          El-Well Oy tarjoaa asiakkailleen, yrityksille ja yksityisille, laajat sähköasennuspalvelut sekä mekaaniset kokoonpanot. 
+          Tarjoamme myös tuotteet ja tarvikkeet asennuspalveluidemme tueksi, kohteesta riippumatta.
+        </p>
+        <p>
+          Yrityksemme tärkein ohjenuora on laatu. Kun tehdään, tehdään kunnolla.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          Asiakkaanamme voit luottaa siihen, että asennukset on tehty oikein, turvallisesti ja määräyksiä noudattaen.
+        </p>
+        <p>
+          El-Well Oy:llä on S2 sähköluvat. Sähköasennuspalvelumme sisältävät aina mittausraportit, kohteen tai työn niin vaatiessa.
+        </p>
+      </div>
+    </div>
+
+    <hr>
+      
+    <div class="row w-100">
+      <h4>Joustorahoitus</h4>
+      <div class="col-lg-7">
+        <p>
+          Joustorahoitus soveltuu erilaisten laitteiden, vapaa-ajan ajoneuvojen 
+          ja tuotteiden sekä rakentamisen että remontoinnin rahoittamiseen. 
+        </p>
+        <p>
+          Joustorahoitusta voit hakea ostoksen teon yhteydessä 
+          Joustorahoitusta välittävästä liikkeestä. Kun hakemus on hyväksytty voit tehdä ensimmäisen oston saman tien.
+        </p>
+        <ul>
+          <li>Luottoa jopa 25 000 euroa.</li>
+          <li>Ei vuosimaksua.</li>
+          <li>Ostoille maksuaikaa jopa 10 vuotta.</li>
+          <li>Pankkisuhteestasi riippumaton.</li>
+          <li>Ei edellytetä käsirahaa, takaajia tai vakuuksia</li>
+        </ul>
+        <p class="kappale_a">
+          Hakiessasi Joustorahoitusta, voit valita itsellesi sopivan kuukausierän sopimuksenteon yhteydessä. 
+          Laskun saatuasi päätät itse, maksatko laskuun merkityn minimierän, koko summan tai jotain siltä väliltä.
+        </p>
+      </div>
+      <div class="joustorahoitus col-lg-5 pb-2">
+        <img class="img-fluid p-2" src="kuvat/Joustorahoitus_fake.png" alt="Joustorahoitus">
+      </div>
+    </div>   
+  </main>
+
+  <footer-component></footer-component>
+
+<script src="components/nav-animaatio.js"></script>
+<script src="components/nav-active.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

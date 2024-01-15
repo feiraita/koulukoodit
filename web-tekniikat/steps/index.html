@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <h1>Otsikko</h1>
+    </header>
+    <div class="container">
+        <div class="tab">
+            <button class="tabLinks" onclick="openStep(event, 'Step1')">Step 1</button>
+            <button class="tabLinks" onclick="openStep(event, 'Step2')">Step 2</button>
+            <button class="tabLinks" onclick="openStep(event, 'Step3')">Step 3</button>
+        </div>
+        <div id="Step1" class="tabContent">
+            <h3>Step 1</h3>
+            <p>Sisältö</p>
+        </div>
+        <div id="Step2" class="tabContent">
+            <h3>Step 2</h3>
+            <p>Sisältö</p>
+        </div>
+        <div id="Step3" class="tabContent">
+            <h3>Step 3</h3>
+            <p>Sisältö</p>
+        </div>
+    </div>
+
+    <script>
+        function openStep(e, stepN) {
+            var i, tabContent, tabLinks;
+            tabContent = document.getElementsByClassName("tabContent");
+
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            tabLinks = document.getElementsByClassName("tabLinks");
+
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+            document.getElementById(stepN).style.display ="block";
+            e.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
