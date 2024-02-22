@@ -1,0 +1,22 @@
+HTML, CSS, BOOTSTRAP, JAVASCRIPT TEHTÄVIÄ
+
+responsiivisuus = CSS:n media queryjä käyttäen tehty responsiivinen sivu.
+Sivun divit vaihtavat tyyliä ja sijaintia näytön koon mukaan.
+3 Breakpointtia.
+
+steps = Netistä malli, jossa on JavaScriptillä tehdyt tabit.
+
+T1 = Tehtävänä keskittää divi, jossa on kuva muita elementtejä.
+
+T2 = Tehtävänä tyylitellä T1. 
+Kuvan borderissa on CSS animaatio
+
+T3 = Tehtävänä tehdä Esimerrki.png mukainen sivu. 
+FlexBoxin harjoittelu.
+
+T4 = Tehtävänä saavutettavan ja mobiiliystävällisen 
+sivun luomien ilman Bootstrappiä.
+
+T5 = Yrityssivuprojekti. 
+Tehtävänä luoda yrityksen pyyntöjen mukainen nettisivu, joka on responsiivinen.
+Tein HTML:iin komponentteja JavaScriptilla. Navin animaatio on jQuerylla.

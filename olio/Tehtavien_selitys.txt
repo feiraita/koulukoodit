@@ -1,3 +1,5 @@
+VISUAL STUDIOSSA C# TEHTÄVIÄ
+
 T1_1 = Konsoliprojekti, joka kysyy käyttäjältä lukumäärän. 
 Sen jälkeen kysyy sen verran numeroita ja laskee niiden keskiarvon.
 Listaa lopuksi syötetyt luvut.
