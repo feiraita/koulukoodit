@@ -1,0 +1,19 @@
+T1_1 = Konsoliprojekti, joka kysyy käyttäjältä lukumäärän. 
+Sen jälkeen kysyy sen verran numeroita ja laskee niiden keskiarvon.
+Listaa lopuksi syötetyt luvut.
+
+T1_2 = Konsoliprojekti, joka pyytää käyttäjältä 2 lukua.
+Jos 1. luku on isompi kuin toinen ohjelma vähentää 2. luvun ensimmäisestä.
+Luvut lasketaan yhteen jos 1. luku on suurempi.
+
+T3 = Konsoliprojekti, jossa harjoiteltiin luokan tekoa.
+Luokka Moikkaaja tulostaa jotain AsetaMoi ja HaeMoikkaus funktioiden perusteella.
+
+T4 = Konsoliprojekti, jossa harjoiteltiin luokkien yhdistämistä.
+Luokalla Oppilas on lista luokasta Opintojakso, luokalla Opintojakso on lista luokasta Opettaja.
+Oppilas ja Opintojakso luokissa on funktio jonka avulla listoihin voidaan lisätä jäseniä.
+Ohjelma kysyy opiskelijan nimen ja tulostaa sen jälkeen tämän opintojaksot, ja niiden opettajat.
+
+T5 = WPF projekti, jonk MainWindow on notepad. Sillä on DockPanel jossa on MenuItemiä eri tarkoituksiin esim.
+tiedoston tallennus, tekstin copy & paste, ikkunan sulku. Show- MenuItem avaa uuden ikkunan, jossa voi muokata
+MainWindowin tekstin kokoa ja tyyliä. Ikkunassa on esimerkki tulostus ja nappi tallentamiseen.
