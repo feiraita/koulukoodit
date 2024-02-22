@@ -1,0 +1,14 @@
+C:\Users\feira\source\repos\T4_1\T4_1\bin\Debug\net8.0\T4_1.exe
+C:\Users\feira\source\repos\T4_1\T4_1\bin\Debug\net8.0\T4_1.deps.json
+C:\Users\feira\source\repos\T4_1\T4_1\bin\Debug\net8.0\T4_1.runtimeconfig.json
+C:\Users\feira\source\repos\T4_1\T4_1\bin\Debug\net8.0\T4_1.dll
+C:\Users\feira\source\repos\T4_1\T4_1\bin\Debug\net8.0\T4_1.pdb
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\T4_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\T4_1.AssemblyInfoInputs.cache
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\T4_1.AssemblyInfo.cs
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\T4_1.csproj.CoreCompileInputs.cache
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\T4_1.dll
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\refint\T4_1.dll
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\T4_1.pdb
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\T4_1.genruntimeconfig.cache
+C:\Users\feira\source\repos\T4_1\T4_1\obj\Debug\net8.0\ref\T4_1.dll
