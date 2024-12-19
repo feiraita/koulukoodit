@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harjoitus 3</title>
+    <script>
+        let canvas, ctx;
+        function draw() {
+            canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            ctx.fillStyle = "pink";
+
+            for(let j = 0; j < 8; j++) {
+                for(let i = 0; i < 8; i++) {
+                    if((i + j) % 2 === 0)
+                    ctx.fillRect(i*50, j*50, 50, 50)
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="draw()">
+    <canvas id="canvas" width="1024" height="768"></canvas>
+</body>
+</html>

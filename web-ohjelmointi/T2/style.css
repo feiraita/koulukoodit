@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #c9e3d1;
+}
+
+.card {
+    background-color: #f3f4f6;
+}
+
+#questions {
+    max-height: 90vh;
+}
+
+label {
+    background-color: #568d66;
+    width: 100%;
+    padding: 1vw;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+label:hover {
+    background-color: #2b6a4d;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #568d66;
+}
+
+input[type="radio"]:not(:checked) + label {
+    background-color: #a5c1ae;
+}
+
+#nappi {
+    background-color: #2b6a4d;
+}
+
+button {
+    background-color: #2b6a4d;
+    color: white;
+    border: none;
+}
+
+button:hover, #nappi:hover {
+    background-color: #568d66;
+}

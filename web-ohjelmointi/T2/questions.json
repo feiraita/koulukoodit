@@ -1,0 +1,28 @@
+{
+    "Q1": {
+        "question": "Venison meat comes from what animal?",
+        "options": [ "Pigs","Deer","Cows", "Goats" ],
+        "answer": "Deer"
+    },
+    "Q2": {
+        "question": "What is Caboc?",
+        "options": [ "Cake", "Pie", "Carrots", "Cheese" ],
+        "answer": "Cheese"
+    },
+    "Q3": {
+        "question": "Prosciutto is a type of which meat?",
+        "options": [ "Steak", "Ham", "Chicken", "Sausage" ],
+        "answer": "Ham"
+    }, 
+    "Q4": {
+        "question": "A persimmon is a type of what?", 
+        "options": [ "Gravy", "Vegetable", "Fruit", "Bird" ],
+        "answer": "Fruit"
+    },
+    "Q5": {
+        "question": "What beans are used in a chili con carne?",
+        "options": [ "Kidney Beans", "Broad Beans", "Haricot Beans", "Chickpeas"],
+        "answer": "Kidney Beans"
+    }
+}
+    

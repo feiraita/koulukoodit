@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assigment 1</title>
+ 
+</head>
+<body onload="empty()"> 
+    <div class="container">
+        <form>
+            <div id="output"></div>
+            <div id="input">
+                <h2>Assigment #1</h2>
+                <!-- Nimi -->
+                <div>
+                    <label for="fullName"><h4>Full name</h4></label>
+                    <input type="text" id="fullName" name="fullName" 
+                        size="60" maxlength="80" 
+                        placeholder="First name Last name" autofocus required/>
+                        <br>
+                    <span id="name-error" class="error-message"></span>
+                </div>
+        
+                <!-- Salasana -->
+                <div class="row">
+                    <div class="column">
+                        <label for="password"><h4>Password</h4></label>
+                        <input type="password" name="password" id="password" maxlength="20"/>
+                    </div>
+                    <div class="column">
+                        <label for="password2"><h4>Password again</h4></label>
+                        <input type="password" name="password2" id="password2"/>
+                    </div>
+                    <br>
+                    <span id="password-error" class="error-message"></span>
+                </div>
+        
+                <!-- Sukupuoli -->
+                <div>
+                    <label for="gender"><h4>Gender</h4></label>
+                    <input type="radio" name="gender" id="male" value="Male"/>
+                    <label for="male">Male</label>
+                    <br>
+                    <input type="radio" name="gender" id="female" value="Female" />
+                    <label for="female">Female</label>
+                    <br>
+                    <input type="radio" name="gender" id="other" value="Other" />
+                    <label for="other">Other</label>
+                    <br>
+                    <span id="gender-error" class="error-message"></span>
+                </div>
+           
+                <!-- Harrastukset -->
+                <label><h4>Hobbies</h4></label>
+                <div class="row">
+                    <div class="column">
+                        <input type="checkbox" name="hobbies" id="games" value="Games" />
+                        <label for="games">Games</label>
+                        <br>
+                        <input type="checkbox" name="hobbies" id="music" value="Music" />
+                        <label for="music">Music</label>
+                    </div>
+                    <div class="column">
+                        <input type="checkbox" name="hobbies" id="sports" value="Sports" />
+                        <label for="Sports">Sports</label>
+                        <br>
+                        <input type="checkbox" name="hobbies" id="tv" value="TV" />
+                        <label for="TV">TV</label>
+                    </div>
+                </div>
+        
+                <!-- Syntymäpäivä -->
+                <div>
+                    <label for="birthdate"><h4>Birth date</h4></label>
+                    <input type="date" name="birthdate" id="birthdate" />
+                </div>
+        
+                <!-- Pituus -->
+                <div>
+                    <label for="height"><h4>Height</h4></label>
+                    <input type="number" id="heightNum" min="40" max="300" />
+                    <input type="range" id="heightSlider"  min="40" max="300" />
+                </div>
+        
+                <!-- Lempiväri -->
+                <div>
+                    <label for="color"><h4>Favorite color</h4></label>
+                    <input type="color" value="#ed9ece" id="color" />
+                </div>
+                 
+                <div class="row">
+                    <div class="column">
+                        <!-- Kotimaa -->
+                        <label for="country"><h4>Home country</h4></label>
+                        <select class="select" name="country" id="country">
+                            <option value="Finland" selected>Finland</option>
+                        </select>
+                    </div>
+        
+                    <div class="column">
+                        <!-- Ammatti -->
+                        <label for="profession"><h4>Profession</h4></label>
+                        <input list="professions" name="profession" id="profession">
+                        <datalist id="professions"></datalist>
+                    </div>
+                </div>
+                 
+                  <!-- Viesti -->
+                <div>
+                    <label for="message"><h4>Message</h4></label>
+                    <textarea name="message" id="message" 
+                    rows="6" cols="60" 
+                    maxlength="1000"
+                    placeholder="Enter text here.."
+                    required>
+                    </textarea>
+                    <br>
+                    <span id="message-error" class="error-message"></span>
+                </div>
+                
+                <button id="submit" type="button" onclick="Submit()">
+                    <h4>Submit</h4>
+                </button>
+            </div>
+        </form>
+    </div>
+
+<script src="submit.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

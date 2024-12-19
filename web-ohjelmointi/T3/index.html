@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment #3</title>
+  </head>
+  <body>
+    <div class="container">
+        <form>
+            <h2>Assigment #3</h2>
+            <div class="row">
+                <div class="column">
+                    <label for="function"><h4>Function:</h4></label>
+                    <input id="function" type="text" placeholder="sin(x)/x">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="column">
+                    <label for="min"><h4>Start of x range:</h4></label>
+                    <input id="min" type="number" placeholder="0">
+    
+                    <label for="max"><h4>End of x range:</h4></label>
+                    <input id="max" type="number" placeholder="10">
+                </div>
+                
+                <div class="column">
+                    <label for="step"><h4>x Step:</h4></label>
+                    <input id="step" type="number" value="1" placeholder="1">
+                    
+                    <label for="scale"><h4>y Scale factor:</h4></label>
+                    <input id="scale" type="number" value="1" placeholder="1">
+                </div>
+            </div>
+    
+            <div class="row">
+                <button id="calculate"><h5>Submit</h5></button>
+            </div>
+        </form>
+        
+
+        <canvas id="myCanvas" width="400" height="300"></canvas>
+    </div>
+    <div id="output"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

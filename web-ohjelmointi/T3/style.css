@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #F2B56B;
+}
+
+.container {
+    justify-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    width: 30%;
+    background-color: #F2F0CE;
+}
+
+form {
+    padding: 1em;
+    width: 80%;
+}
+
+#output {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    display: none;
+}
+
+#output:not(:empty) {
+    display: grid; 
+}
+
+input {
+    height: 1.5em;
+    margin: 0.5em 0; 
+    padding: 0.3em;
+    width: calc(100% - 1em); 
+    box-sizing: border-box;
+}
+
+h2 {
+    padding-top: 1em;
+}
+
+h4 {
+    margin-bottom: 0.2em;
+    padding-top: 0.4em;
+    color: #a93e00;
+}
+h5 {
+    color: #F2F0CE;
+}
+
+canvas {
+    margin-top: 3em;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100%; 
+    height: auto;
+}
+
+button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #a93e00;
+    border: none;
+}
+
+.row {
+    display: table;
+    width: 90%;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    form {
+        padding: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 45%;
+    }
+    form {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container {
+        width: 100%;
+    }
+}
