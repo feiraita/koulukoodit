@@ -1,22 +1,27 @@
 import json
-
 file_name = "T1/words.json"
-with open(file_name, "r", encoding='utf-8') as file:
-    data = json.load(file)
 
-def show():
+try:
     with open(file_name, "r", encoding='utf-8') as file:
-        print(json.load(file))
+        data = json.load(file)
+
+except (FileNotFoundError, json.JSONDecodeError):
+    def initialize(file_name, text):
+        with open(file_name, 'w', encoding='utf-8') as file:
+            file.write(text)
+        with open(file_name, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    
+    sanakirja = '{"cat": "kissa", "snake": "käärme"}'
+    data = initialize(file_name, sanakirja)
 
 def add(word, sana):
     data[word] = sana
     with open(file_name, "w", encoding='utf-8') as file:
         json.dump(data, file)
 
-show()
-
 while True:
-    word = input(str("Give me a word: ")).lower().strip()
+    word = input("Give me a word: ").lower().strip()
     if word == "":
         print("Exiting program.")
         break
@@ -25,6 +30,5 @@ while True:
         if sana != "":
             add(word, sana)
             print(f"{word} added to dictionary.")
-        continue
-
-    print(f"{word}: {data[word]}")
+    else:
+        print(f"{word}: {data[word]}")
