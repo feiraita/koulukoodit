@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Dictionary
 
-# Register your models here.
+class DictionaryAdmin(admin.ModelAdmin):
+    list_display = ('word', 'definition')
+    search_fields = ['word', 'definition']
+
+admin.site.register(Dictionary, DictionaryAdmin)
