@@ -1,0 +1,49 @@
+﻿@using SecondOfMany.Models.ViewModel
+@model RegisterViewModel
+
+@{ ViewData["Title"] = "Sign up Page"; }
+
+<div class="register-bg d-flex justify-content-center">
+    <div class="register card">
+        <h1 class="card-title text-center display-6">Sign up</h1>
+        <div class="card-body d-flex justify-content-center">
+            <form  asp-controller="Register" asp-action="Index" method="post"> 
+                <div class="form-group row mb-2">
+                    <div class="col">
+                        <label asp-for="fName" class="col-form-label label-control"></label> <p class="required">*</p>
+                        <input asp-for="fName" class="form-control" />
+                        <span asp-validation-for="fName" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="lName" class="col-form-label label-control"></label> <p class="required">*</p>
+                        <input asp-for="lName" class="form-control" />
+                        <span asp-validation-for="lName" class="text-danger"></span>
+                    </div> 
+                </div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="Email" class="col-form-label label-control"></label> <p class="required">*</p>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group row mb-2">
+                    <div class="col">
+                        <label asp-for="Pass" class="col-form-label label-control"></label> <p class="required">*</p>
+                        <input asp-for="Pass" class="form-control" />
+                        <span asp-validation-for="Pass" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Word" class="col-form-label label-control"></label> <p class="required">*</p>
+                        <input asp-for="Word" class="form-control" />
+                        <span asp-validation-for="Word" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group mb-2 d-flex justify-content-end ">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

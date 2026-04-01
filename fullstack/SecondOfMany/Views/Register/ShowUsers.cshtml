@@ -1,0 +1,30 @@
+﻿@using SecondOfMany.Models.ViewModel
+
+@{ ViewData["Title"] = "Show Users Page"; }
+
+<div class=" d-flex justify-content-center">
+    <div class="showUsers card mw-50">
+        <h1 class="card-title text-center display-6">Users:</h1>
+        <div class="card-body d-flex justify-content-center">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Full name</th>
+                  <th scope="col">Email</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                  @foreach (var user in Model) {
+                  <tr>
+                      <td>@user.userId</td>
+                      <td>@user.fName @user.lName</td>
+                      <td>@user.Email</td>
+                   </tr>
+                }
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+
+@if (User.Identity.IsAuthenticated) {
+    <h1>@User.Identity.Name</h1>
+    <form asp-controller="Home" asp-action="Logout" method="post">
+        <input type="submit" value="Kirjaudu ulos" />
+    </form>
+} else {
+    
+}
+
+<div class="text-center">
+ 
+    <!-- Form ain submit!!! -->
+    <form asp-controller="Home" asp-action="Login" method="post">
+        <input type="text" name="username" placeholder="Käyttäjänimi"/>
+        <input type="password" name="password" placeholder="*****"/>
+        <br />
+        <input type="submit" value="Kirjaudu"/>
+    </form>
+
+</div>

@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Partial testbed, with a number @ViewData["number"]</h2>
+<button class="action-btn" id="1">First</button>
+<button class="action-btn" id="2">Second</button>
+
+<div id="render-container">
+    <partial name="_FirstPage" view-data="ViewData" />
+</div>
+
+@section Scripts {
+    <script>
+        $(".action-btn").on("click", function() {
+            
+            var number = @(ViewData["number"]); //utilize the viewdata inside javascript
+            var target = "";
+            if (this.id == "1") { target = "_FirstPage" }
+            else if (this.id == "2") { target = "_SecondPage" }
+
+            if (target.length > 0) { //if the target length is 0, nbothing matched = no need for ajax call
+                $.ajax({
+                    type: 'post',
+                    url: '/Partial/' + target, // Partial controller, add target to the route to find the correct method
+                    data: 'number=' + number, // Pass the number variable, with number js variable values
+                    success: function (data) { // on success, receive stuff as "data"
+                        if (data) {
+                            $("#render-container").html(data) //change render.container html to the received data
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+}

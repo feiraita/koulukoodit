@@ -1,0 +1,67 @@
+﻿@using ViikkoT1.Models.ViewModel
+@{ ViewData["Title"] = "Home Page"; }
+
+<div class="text-center">
+    <h1 class="display-4">
+       Put forward, both the numerical value that you personally 
+       hold in the highest regard, as well as the one for which
+       you possess the least degree of preference; while keeping in mind that
+       each selected number falls within the range of 1 to 100!
+   </h1>
+    <button class="action-btn btn btn-info  text-white my-2" id="lomake">Open form</button>
+
+    <div id="render-container"></div>
+       
+     <h1 class="card-title text-center display-6">Previous answers:</h1>
+        <div class="card-body d-flex justify-content-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">most fav number</th>
+                        <th scope="col">least fav number</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model.Answers != null) {
+                        foreach (var answer in Model.Answers) {
+                            <tr>
+                                <td>@answer.answerId</td>
+                                <td>@answer.first</td>
+                                <td>@answer.second</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+</div> 
+
+@section Scripts {
+    <script>
+        $(".action-btn").on("click", function () {
+            $.ajax({
+                type: 'post',
+                url: '/Home/_LomakePage',
+                success: function (response) {
+                    $("#render-container").html(response);
+                }
+            });
+
+        });
+        $(document).on("submit", "#lomakeForm", function (e) {
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                type: "POST",
+                url: "/Home/_LomakePage",
+                data: form.serialize(),
+                success: function () { location.reload(); }
+            });
+        });
+       
+    </script>
+}

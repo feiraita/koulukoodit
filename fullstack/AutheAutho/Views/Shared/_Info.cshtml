@@ -1,0 +1,13 @@
+﻿@if (TempData["errors"] != null) {
+        //TempData pysyy yhden refresh ajan, hyvä kasuaaliin tiedon jakamiseen
+        <h4 id="denger" class="text-danger">@TempData["errors"]</h4>
+    }
+@section Scripts {
+    <script>
+        $(document).on("ready", function() {
+            setTimeout(function() {
+                $("#denger").remove();
+            }, 4000);
+        });
+    </script>
+}

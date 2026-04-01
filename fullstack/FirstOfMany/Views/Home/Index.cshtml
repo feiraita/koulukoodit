@@ -1,0 +1,42 @@
+﻿@using FirstOfMany.Models.ViewModels
+
+@model HomeIndexViewModel;
+@{ ViewData["Title"] = "Home Page"; }
+
+@foreach( var kvp in Model.VarienLukumaarat ) {
+    <p>@kvp.Key - @kvp.Value kpl</p>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Mopolista</h1>
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th><a href="/?sortBy=merkki&desc=@(!(bool)ViewData["desc"])">Merkki</a></th>
+            <th><a href="/?sortBy=malli&desc=@(!(bool)ViewData["desc"])">Malli</a></th>
+            <th><a href="/?sortBy=vuosi&desc=@(!(bool)ViewData["desc"])">Vuosi</a></th>
+            <th>Väri</th>
+        </tr>
+    </thead>
+
+    @foreach (var mopo in Model.Motorcycles) {
+         /* luokka = "";
+        @if (mopo.Vari == "punainen")
+        {
+            luokka = "background-color:red;";
+        }
+        else { luokka = "background-color:blue;"; }
+        <td style="@luokka">*/
+        
+        <tbody>
+            <tr>
+                <td >@mopo.Merkki</td>
+                <td>@mopo.Malli</td>
+                <td>@mopo.Vuosi</td>
+                <td>@mopo.Vari</td>
+            </tr>
+        </tbody>
+        }
+    </table>
+</div>

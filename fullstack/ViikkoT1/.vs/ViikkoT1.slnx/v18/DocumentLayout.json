@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\models\\viewmodel\\lomakepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:models\\viewmodel\\lomakepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\wwwroot\\data\\answers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:wwwroot\\data\\answers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\views\\home\\_lomakepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:views\\home\\_lomakepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|c:\\users\\feira\\source\\repos\\viikkot1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EF7C42A4-B33E-D56C-96E4-1773AA611850}|ViikkoT1.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 189,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LomakePageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Models\\ViewModel\\LomakePageViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModel\\LomakePageViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Models\\ViewModel\\LomakePageViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModel\\LomakePageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T09:06:09.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Answer.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Models\\Answer.cs",
+              "RelativeDocumentMoniker": "Models\\Answer.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Models\\Answer.cs",
+              "RelativeToolTip": "Models\\Answer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T09:12:22.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-20T09:46:12.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "answers.json",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\wwwroot\\data\\answers.json",
+              "RelativeDocumentMoniker": "wwwroot\\data\\answers.json",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\wwwroot\\data\\answers.json",
+              "RelativeToolTip": "wwwroot\\data\\answers.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-19T12:19:35.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LomakePage.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Views\\Home\\_LomakePage.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\_LomakePage.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Views\\Home\\_LomakePage.cshtml",
+              "RelativeToolTip": "Views\\Home\\_LomakePage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-19T08:13:17.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T08:20:05.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-19T08:21:47.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-19T08:53:32.175Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 189,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
