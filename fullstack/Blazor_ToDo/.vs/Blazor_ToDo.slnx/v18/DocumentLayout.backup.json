@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\models\\saveableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:models\\saveableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\manipulators\\databasemanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:manipulators\\databasemanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\components\\pages\\todopage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:components\\pages\\todopage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|Blazor_ToDo.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|Blazor_ToDo.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|Blazor_ToDo.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\blazor_todo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|Blazor_ToDo.csproj|solutionrelative:blazor_todo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|c:\\users\\feira\\source\\repos\\blazorappserver\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01ECCF39-DC23-9E3E-62DA-5F589AF12842}|BlazorAppServer.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 189,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAlwAoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T09:59:11.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:31:01.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T07:31:22.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TodoPage.razor",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Pages\\TodoPage.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\TodoPage.razor",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Pages\\TodoPage.razor",
+              "RelativeToolTip": "Components\\Pages\\TodoPage.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T07:41:43.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAlwAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T09:43:45.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseManipulator.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Manipulators\\DatabaseManipulator.cs",
+              "RelativeDocumentMoniker": "Manipulators\\DatabaseManipulator.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Manipulators\\DatabaseManipulator.cs",
+              "RelativeToolTip": "Manipulators\\DatabaseManipulator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:46:19.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Todo.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Models\\Todo.cs",
+              "RelativeDocumentMoniker": "Models\\Todo.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Models\\Todo.cs",
+              "RelativeToolTip": "Models\\Todo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:50:02.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SaveableObject.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Models\\SaveableObject.cs",
+              "RelativeDocumentMoniker": "Models\\SaveableObject.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Models\\SaveableObject.cs",
+              "RelativeToolTip": "Models\\SaveableObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:49:23.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BlazorAppServer.csproj",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Blazor_ToDo.csproj",
+              "RelativeDocumentMoniker": "Blazor_ToDo.csproj",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Blazor_ToDo.csproj",
+              "RelativeToolTip": "Blazor_ToDo.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-07T07:45:17.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-07T07:43:11.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Pages\\Counter.razor",
+              "RelativeToolTip": "Components\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T07:24:54.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\BlazorAppServer\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T07:31:19.389Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 189,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

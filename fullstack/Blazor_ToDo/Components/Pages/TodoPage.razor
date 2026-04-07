@@ -1,0 +1,65 @@
+﻿@page "/todo"
+@using Blazor_ToDo.Manipulators
+@using Blazor_ToDo.Models
+@rendermode InteractiveServer
+
+<h1>To Do List</h1>
+
+<form @onsubmit="AddTodo">
+    <input @bind="newTodo" />
+    <button type="submit">Add</button>
+</form>
+
+@if (todoList.Count == 0)
+{
+    <p>Tyhjä</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Todo</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var todo in todoList)
+            {
+                <tr>
+                    <td>@todo.Text</td>
+                    <td>
+                       <input type="checkbox" @bind="todo.IsDone" @bind:after="() => UpdateTodo(todo)" />
+                   </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    private List<Todo> todoList = new();
+    private string newTodo = "";
+
+    protected override void OnInitialized() {
+        todoList = DatabaseManipulator.GetAll<Todo>();
+    }
+
+    private void AddTodo() {
+        if (string.IsNullOrWhiteSpace(newTodo))
+            return;
+
+        var todo = new Todo {
+            Text = newTodo,
+            IsDone = false
+        };
+
+        DatabaseManipulator.SaveTodo(todo);
+        todoList.Add(todo);
+
+        newTodo = "";
+    }
+
+    private void UpdateTodo(Todo todo) {
+        DatabaseManipulator.SaveTodo(todo);
+    }
+}
