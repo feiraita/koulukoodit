@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Edit Category Page";
+}
+
+@using Phase7.Models.ViewModels
+@model CategoryViewModel
+
+<div class="pt-3 content d-flex text-black justify-content-center">
+    <form class="w-75" id="editCategoryForm" asp-controller="Pages" asp-action="_EditCategory" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label asp-for="name" class="label-control"></label>
+            <input asp-for="name" value="@Model.name" class="form-control" readonly />
+            <input type="hidden" asp-for="categoryID" />
+            <small class="form-text text-muted">Name of the category you are editing</small>
+        </div>
+
+        <div class="form-group">
+             @{
+                var monthlyLimit = new SelectList(
+                    new List<SelectListItem> {
+                        new SelectListItem { Text = "No", Value = "false" },
+                        new SelectListItem { Text = "Yes", Value = "true" },
+                    }, "Value", "Text");
+            }
+            <label asp-for="monthlyLimit" class="label-control"></label>
+            @Html.DropDownListFor(m => m.monthlyLimit, monthlyLimit, new { @class="monthlyLimit form-control" })
+             <small class="form-text text-muted">Is there a monthly limit for this category</small>
+         </div>
+
+        <div id="amountGroup" class="form-group">
+            <label asp-for="amount" class="label-control"></label>
+            <input asp-for="amount" class="form-control" />
+            <small class="form-text text-muted">What is the monthly limit?</small>
+            <span asp-validation-for="amount" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-flex justify-content-between">
+            <button type="button" class="w-25 btn btn-custom-delete">Delete</button>
+            <button type="submit" class="w-25 btn btn-custom-sm">Save</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Upcoming Events";
+}
+
+@model Phase7.Models.ViewModels.TransactionViewModel
+
+<div class="row justify-content-center">
+    <div class="col-12 col-lg-4">
+        <div class="card shadow mb-3 w-100">
+            <h3 class="card-title pt-3 text-center">Current Balance</h3>
+            <h1 class="balance card-title pt-3 text-center">@Model.Balance €</h1>
+            <div class="form-group d-flex justify-content-center">
+                <a role="button" href="/Pages/Index" class="btn btn-custom-balance">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expenses ja income tabs-->
+  <div class="col-12 col-lg-4">
+        <div class="card shadow mb-3 w-100">
+            <ul class="nav nav-tabs nav-fill d-flex justify-content-evenly">
+                <li class="nav-item">
+                    <p class="nav-link text-white active expenses" aria-current="page" href="#expenses" id="expenses-tab" data-bs-toggle="tab" role="tab" aria-controls="expenses" aria-selected="true">Expense</p>
+                </li>
+                <li class="nav-item">
+                    <p class="nav-link text-white income" href="#income" id="income-tab" data-bs-toggle="tab" role="tab" aria-controls="income" aria-selected="false">Income</p>
+                </li>
+            </ul>
+
+            <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                    <!--Expenses-->
+                    <div class="tab-pane fade show active" role="tabpanel" id="expenses" aria-labelledby="expenses-tab">
+                        <h3 class="card-title pt-3 text-center">Upcoming Expenses</h3>
+                        <h6 class="card-subtitle mb-2 text-center text-muted">Next Expenses</h6>
+
+                    <!-- dummy dataa-->
+                        <div class="pt-3 d-flex justify-content-between align-items-center">
+                            <p class="d-inline-block">Rainy Day <small>10.7.2025</small></p>
+                            <p class="d-inline-block">-5€</p>
+                        </div>
+                        <div class="pt-3 d-flex justify-content-between align-items-center">
+                            <p class="d-inline-block">Rainy Day <small>10.7.2025</small></p>
+                            <p class="d-inline-block">-5€</p>
+                        </div>
+                        <div class="pt-3 d-flex justify-content-between align-items-center">
+                            <p class="d-inline-block">Rainy Day <small>10.7.2025</small></p>
+                            <p class="d-inline-block">-5€</p>
+                        </div>
+                    </div>
+
+                    <!-- Income-->
+                    <div class="tab-pane fade" role="tabpanel" id="income" aria-labelledby="income-tab">
+                        <h3 class="card-title pt-3 text-center">Upcoming Income</h3>
+                        <h6 class="card-subtitle mb-2 text-center text-muted">Next Payments</h6>
+
+                        <!-- dummy dataa-->
+                        <div class="pt-3 d-flex justify-content-between align-items-center">
+                            <p class="d-inline-block">Rainy Day <small>10.7.2025</small></p>
+                            <p class="d-inline-block">+105€</p>
+                        </div>
+                        <div class="pt-3 d-flex justify-content-between align-items-center">
+                            <p class="d-inline-block">Rainy Day <small>10.7.2025</small></p>
+                            <p class="d-inline-block">+41€</p>
+                        </div>
+                        <div class="pt-3 d-flex justify-content-between align-items-center">
+                            <p class="d-inline-block">Rainy Day <small>10.7.2025</small></p>
+                            <p class="d-inline-block">+5€</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+
+    <div class="d-none d-lg-block col-lg-4"></div>
+</div>

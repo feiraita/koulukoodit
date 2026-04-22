@@ -1,0 +1,165 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Phase7.Models.ViewModels.TransactionViewModel
+
+<div class="row">
+    <div class="col-12 col-md-8 col-lg-4 mx-auto mx-lg-0">
+        <div class="card shadow mb-3 w-100">
+            <h3 class="card-title pt-3 text-center">Current Balance</h3>
+            <h1 class="balance card-title pt-3 text-center">@Model.Balance €</h1>
+            <div class="form-group d-flex justify-content-center">
+                <a role="button" href="/Pages/UpcomingEvents" class="btn btn-custom-balance">Upcoming Events</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modaali expenses ja income -->
+    <div class="modal " id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" 
+                    data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4 mx-auto mx-lg-0">
+        <div class="card shadow mb-3 w-100">
+            <ul class="nav nav-tabs nav-fill d-flex justify-content-evenly">
+                <li class="nav-item">
+                    <p class="nav-link text-white active expenses" aria-current="page" href="#expenses" id="expenses-tab" data-bs-toggle="tab" role="tab" aria-controls="expenses" aria-selected="true">Expense</p>
+                </li>
+                <li class="nav-item">
+                    <p class="nav-link text-white income" href="#income" id="income-tab" data-bs-toggle="tab" role="tab" aria-controls="income" aria-selected="false">Income</p>
+                </li>
+            </ul>
+       
+            <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                    <!-- EXPENSES-->
+                    <div class="tab-pane fade show active" role="tabpanel" id="expenses" aria-labelledby="expenses-tab">
+                        <h6 class="card-title pt-3 text-center text-muted">This month's Expenses</h6>
+                        <div class="form-group d-flex justify-content-center">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <button type="button" class="btn openModal-btn btn-custom-lg" 
+                                    data-target="_AddExpense" data-title="Add Expenses">Add Expenses</button>
+                        </div>
+                        @foreach(var expense in Model.ExpenseList.OrderByDescending(e => e.date)) {
+                            <div class="pt-3 d-flex justify-content-between align-items-center">
+                                <p class="d-inline-block">@expense.category <small>@expense.date.ToString("dd.MM.yyyy")</small></p>
+                                <p>@expense.amount €</p>   
+                            </div>
+                        }
+                    </div>     
+                   
+                    <!--INCOME-->
+                    <div class="tab-pane fade" role="tabpanel" id="income" aria-labelledby="income-tab">
+                        <h6 class="card-title pt-3 text-center text-muted">This month's Income</h6>
+                        <div class="form-group d-flex justify-content-center">
+                        <!--Chart-->
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <button type="button" class="btn openModal-btn btn-custom-lg" 
+                                    data-target="_AddIncome" data-title="Add Income">Add Income</button>
+                        </div>
+                        @foreach(var income in Model.IncomeList.OrderByDescending(i => i.date)) {
+                            <div class="pt-3 d-flex justify-content-between align-items-center">
+                                <p class="d-inline-block">@income.name <small>@income.date.ToString("dd.MM.yyyy")</small></p>
+                                <p>@income.amount €</p>   
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="d-none d-lg-block col-lg-4"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@section Scripts {
+<script>
+$(".openModal-btn").on("click", function () {
+    var target = $(this).data("target");
+    var title = $(this).data("title");
+
+    if (target) {
+        $.ajax({
+            type: 'GET',
+            url: '/Pages/' + target,
+            data: { title: title },
+            success: function (result) {
+
+                $("#modalBody").html(result);
+                $("#modalTitle").text(title);
+
+                var modal = new bootstrap.Modal(document.getElementById('myModal'));
+                modal.show();
+            },
+            error: function () {
+                alert("Failed to load partial view.");
+            }
+        });
+    }
+});
+</script>
+
+@{
+    var now = DateTime.Now;
+    var startOfMonth = new DateTime(now.Year, now.Month, 1);
+    var endOfMonth = startOfMonth.AddMonths(1);
+
+    var filteredExpenses = Model.ExpenseList
+        .Where(e => e.date >= startOfMonth && e.date < endOfMonth);
+
+    var groupedByCategory = filteredExpenses
+        .GroupBy(e => e.category);
+
+    var categoryData = groupedByCategory
+        .Select(group => new {
+            Category = group.Key,                
+            Total = group.Sum(exp => exp.amount)
+        })
+        .ToList();
+}
+
+<script>
+    const ctx = document.getElementById('myChart');
+    const categoryLabels = @Html.Raw(
+        System.Text.Json.JsonSerializer.Serialize(
+            categoryData.Select(c => c.Category)
+        )
+    );
+
+    const categoryTotals = @Html.Raw(
+        System.Text.Json.JsonSerializer.Serialize(
+            categoryData.Select(c => c.Total)
+        )
+    );
+
+if (ctx) {
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: categoryLabels,
+            datasets: [{
+                data: categoryTotals,
+                backgroundColor: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+            borderWidth: 2,
+            borderColor: '#fff'
+        }]
+        }
+    });
+}
+</script>
+}

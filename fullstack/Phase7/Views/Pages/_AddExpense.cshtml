@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Add Expense Page";
+}
+
+@using Phase7.Models.ViewModels
+@model ExpenseViewModel
+
+<div class="pt-3 content d-flex text-black justify-content-center">
+    <form class="w-75" id="expenseForm" asp-controller="Pages" asp-action="_AddExpense" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label asp-for="category" class="label-control"></label>
+            <select asp-for="category"
+                    asp-items="Model.Categories" class="form-select">
+                <option value="">-- Select category --</option>
+            </select>
+            <small class="form-text text-muted">Select the category this expense belongs to</small>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="amount" class="label-control"></label>
+            <input asp-for="amount" class="form-control" />
+            <small class="form-text text-muted">Enter the amount spent</small>
+            <span asp-validation-for="amount" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="date" class="label-control"></label>
+            <input asp-for="date" type="date" asp-format="{0: dd-MM-yyyy}" class="form-control" /> 
+            <small class="form-text text-muted">When did this expense occur?</small>
+            <span asp-validation-for="date" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @{
+                var recurringList = new SelectList(
+                    new List<SelectListItem> {
+                        new SelectListItem {Text = "Never repeat", Value = "never-repeat"},
+                        new SelectListItem {Text = "Every week", Value = "every-week"},
+                        new SelectListItem {Text = "Every month", Value = "every-month"},
+                    }, "Value", "Text");
+            }
+            <label asp-for="recurring" class="label-control"></label>
+            @Html.DropDownListFor(m => m.recurring, recurringList, "- Select -", new { @class="form-control" })
+            <small class="form-text text-muted">Does this expense repeats automatically</small>
+        </div>
+
+        <div class="form-group d-flex justify-content-end">
+            <button type="submit" class="btn btn-custom-sm w-25">Add</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,135 @@
+html { font-size: 14px; }
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@font-face {
+    font-family: 'Libre Bodoni';
+    src: url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+}
+
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    height: 100%;
+    width: 100%;
+    background-color: #6B3F69;
+}
+
+h1, h2, h3, h4, h5 { font-family: 'Libre Bodoni', Arial; }
+
+footer {
+    background-color: #4F2B4E;
+    font-weight: 500;
+}
+
+/* Layout */
+.wrap {
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* Nav */
+.user { font-family: "Libre Bodoni"; }
+
+.btn-logout {
+    background-color: white;
+    color: #6B3F69;
+    font-weight: 600;
+    font-family: Arial;
+}
+
+/*Overview*/
+.balance {
+    font-family: Arial;
+    font-weight: 600;
+}
+
+/* Modaali */
+.modal, .modal-body { color: #6B3F69; }
+
+
+label {
+    font-weight: 500;
+    color: #6B3F69;
+}
+
+.form-group {
+    margin-bottom: 2vh;
+}
+
+
+/* Kortti */
+.card {
+    border: none;
+    color: #6B3F69;
+}
+
+.nav-tabs:not(active) {
+    background-color: #A376A2;
+    border-radius: 5px 5px 0 0;
+}
+
+.required {
+    display: inline;
+    color: red;
+}
+
+.nav-link.active { color: #6B3F69 !important; }
+
+.card-header {
+    background-color: #FFE5FE;
+}
+
+
+/* Napit */
+.btn-custom-lg, .btn-custom-balance {
+    background-color: #6B3F69;
+    color: white;
+    width: 100%;
+}
+
+    .btn-custom-lg:hover, .btn-custom-balance:hover, .btn-custom-sm:hover {
+        background-color: #A376A2;
+        color: white;
+    }
+
+.btn-custom-balance { margin: 1em; }
+
+.btn-custom-sm, .btn-custom-back {
+    background-color: #6B3F69;
+    color: white;
+    padding: 0.5vh 1vw; 
+}
+
+.btn-custom-back {
+    background-color: #4F2B4E;
+ 
+}
+
+    .btn-custom-back:hover {
+        background-color: #A376A2;
+        color: white;
+    }
+
+.btn-custom-delete {
+    background-color: white;
+    border: 2px solid #6B3F69;
+    color: #6B3F69;
+}
+
+    .btn-custom-delete:hover {
+        background-color: #6B3F69;
+        color: white;
+    }

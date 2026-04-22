@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Savings";
+}
+@using Phase7.Models.ViewModels
+@model SavingGoalViewModel
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow  pb-3 w-100">
+            <h2 class="card-title pt-3 text-center">My Goals</h2>
+            <h2 class="card-title pt-3 text-center">Savings in Total</h2>
+            <h1 class="balance card-title pt-3 text-center">732€</h1>
+            <div class="form-group d-flex justify-content-center">
+                <button type="button" class="btn openModal-btn btn-custom-balance mb-0" 
+                        data-target="_CreateSaving" data-title="Create a Saving Goal">Create a Saving Goal</button>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn openModal-btn btn-custom-balance" 
+                        data-target="_WithdrawFromSaving" data-title="Withdraw from Saving Goal">Withdraw</button>
+                <button type="button" class="btn openModal-btn btn-custom-balance" 
+                        data-target="_AddToSaving" data-title="Add to Saving Goal">Add to saving</button>
+            </div>
+
+            <!-- Modaali Add ja withdraw -->
+            <div class="modal" id="myModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle"></h5>
+                            <button type="button" class="btn-close" 
+                            data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body" id="modalBody"></div>
+                    </div>
+                </div>
+            </div>
+
+             @if (Model != null && Model.SavingGoals != null) {
+                    @foreach (var savingGoal in Model.SavingGoals) {
+                        <div class="form-group px-4 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5>@savingGoal.name</h5>
+                                <p>Goal: @savingGoal.goal €</p>
+                            </div>   
+                            <a class="btn btn-custom-sm w-25" href="@Url.Action("SavingsOpen", "Pages", new { id = savingGoal._id })">
+                                Open
+                            </a> 
+                        </div>
+                    }
+                } else {
+                     <div class="d-flex align-items-center">
+                        <h5 class="mb-0">No saving goals</h5>
+                        <p class="mb-0 ps-3">10/2300€</p>
+                    </div>
+                    <p class="m-0">8%</p>
+                    <a role="button" href="/Pages/SavingsOpen" class="btn btn-custom-sm w-25">Open</a>
+                } 
+        </div>
+    </div>
+</div>
+        
+@section Scripts {
+<script>
+$(".openModal-btn").on("click", function () {
+    var target = $(this).data("target");
+    var title = $(this).data("title");
+
+    if (target) {
+        $.ajax({
+            type: 'GET',
+            url: '/Pages/' + target,
+            data: { title: title },
+            success: function (result) {
+
+                $("#modalBody").html(result);
+                $("#modalTitle").text(title);
+
+                var modal = new bootstrap.Modal(document.getElementById('myModal'));
+                modal.show();
+
+                function toggleAmount() {
+                    const value = $(".recurringList").val();
+
+                    if (value === "true") {
+                        $("#recurringGroup").show();
+                    } else {
+                        $("#recurringGroup").hide();
+                    }
+                }
+                toggleAmount();
+                $(document).on("change", "#recurring", toggleAmount);
+            },
+            error: function () {
+                alert("Failed to load partial view.");
+            }
+        });
+    }
+});
+</script>
+}

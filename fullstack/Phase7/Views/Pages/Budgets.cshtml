@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Budgets";
+}
+
+@using Phase7.Models.ViewModels
+@model BudgetViewModel
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow mb-3 pb-3 w-100">
+            <h2 class="card-title pt-3 text-center">My Budgets</h2>
+            <div class="form-group d-flex justify-content-center">
+                <button type="button" class="btn openModal-btn btn-custom-balance" 
+                        data-target="_AddCategory" data-title="Create a Category">Create a Category</button>
+            </div>
+
+            <!-- Modaali create -->
+            <div class="modal" id="myModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle"></h5>
+                            <button type="button" class="btn-close" 
+                            data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body" id="modalBody"></div>
+                    </div>
+                </div>
+            </div>
+
+           <h3 class="pb-3 text-center">Categories with a monthly limit</h3>
+            @if (Model.WithLimit != null && Model.WithLimit.Any()) {
+                foreach (var category in Model.WithLimit) {
+                    <div class="form-group px-4 ">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5>@category.name</h5>
+                            <a class="btn btn-custom-sm w-25" href="@Url.Action("BudgetsOpen", "Pages", new { id = category.categoryID })">
+                                Open
+                            </a>
+                        </div>
+                        @if (@category.total > @category.amount) {
+                            <p style="color:red;">@category.total € / @category.amount €</p>
+                        } else {
+                            <p style="color:green;">Used: @category.total € / @category.amount €</p>
+                        }
+                            
+                            @if (category.amount != null) {
+                                var percent = (category.total ?? 0) / category.amount.Value * 100;
+                                <p>Used: @Math.Round(percent, 0)%</p>
+                            }
+                    </div> 
+                }
+            } else {
+                <div class="form-group text-center">
+                    <p>No categories without a limit</p>
+                </div> 
+            }        
+            <h3 class="py-3 px-2 text-center">Categories without a monthly limit</h3>
+            @if (Model.WithoutLimit != null && Model.WithoutLimit.Any()) {
+                foreach (var category in Model.WithoutLimit) {
+                    <div class="form-group px-4 ">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5>@category.name</h5>
+                            <a class="btn btn-custom-sm w-25" href="@Url.Action("BudgetsOpen", "Pages", new { id = category.categoryID })">
+                                Open
+                            </a>
+                        </div>
+                        <p>Used this month: @category.total €</p>
+                    </div>  
+                }
+            } else {
+                <div class="form-group text-center">
+                    <p>No categories without a limit</p>
+                </div> 
+            }
+        </div>
+    </div>
+</div>
+           
+@section Scripts {
+<script>
+$(".openModal-btn").on("click", function () {
+    var target = $(this).data("target");
+    var title = $(this).data("title");
+
+    if (target) {
+        $.ajax({
+            type: 'GET',
+            url: '/Pages/' + target,
+            data: { title: title },
+            success: function (result) {
+
+                $("#modalBody").html(result);
+                $("#modalTitle").text(title);
+
+                var modal = new bootstrap.Modal(document.getElementById('myModal'));
+                modal.show();
+
+                function toggleAmount() {
+                    const value = $(".monthlyLimit").val();
+
+                    if (value === "true") {
+                        $("#amountGroup").show();
+                    } else {
+                        $("#amountGroup").hide();
+                    }
+                }
+                toggleAmount();
+                $(document).on("change", "#monthlyLimit", toggleAmount);
+            },
+            error: function () {
+                alert("Failed to load partial view.");
+            }
+        });
+    }
+
+});
+</script>
+}

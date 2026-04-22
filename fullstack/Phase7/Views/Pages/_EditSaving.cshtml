@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Edit a Saving Goal";
+}
+
+@using Phase7.Models.ViewModels
+@model SavingGoalViewModel
+
+<div class="pt-3 content d-flex text-black justify-content-center">
+    <form class="w-75" id="expenseForm" asp-controller="Pages" asp-action="_EditSaving" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label asp-for="name" class="label-control"></label>
+            <input asp-for="name" disabled value="@Model.name" class="locked form-control" readonly />
+            <input type="hidden" asp-for="savingID" />
+            <small class="form-text text-muted">Name of the saving goal you are editing</small>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="goal" class="label-control"></label>
+            <input asp-for="goal" type="number" class="form-control" />
+            <small class="form-text text-muted">Total amount you want to save</small>
+            <span asp-validation-for="goal" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+             @{
+                var recurringList = new SelectList(
+                    new List<SelectListItem> {
+                        new SelectListItem { Text = "No", Value = "false", Selected = true },
+                        new SelectListItem { Text = "Yes", Value = "true" },
+                    }, "Value", "Text");
+                }
+            <label asp-for="recurring" class="label-control"></label>
+            @Html.DropDownListFor(m => m.recurring, recurringList, new { @class="recurringList form-control" })
+             <small class="form-text text-muted">Want to add payments automatically into this saving?</small>
+         </div>
+
+        <div id="recurringGroup" class="form-group">
+            <div class="form-group">
+                <label asp-for="date" class="label-control"></label>
+               <input asp-for="date" type="date" class="form-control" /> 
+                <small class="form-text text-muted">Payments happen monthly, select day you want them to start</small>
+                <span asp-validation-for="date" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="payments" class="label-control"></label>
+                <input asp-for="payments" type="number" class="form-control" /> 
+                <small class="form-text text-muted">How much you plan to save each month</small>
+                <span asp-validation-for="payments" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group d-flex justify-content-between">
+            <button type="submit" class="w-25 btn btn-custom-delete">Delete</button>
+            <button type="submit" class="w-25 btn btn-custom-sm">Save</button>
+        </div>
+    </form>
+</div>

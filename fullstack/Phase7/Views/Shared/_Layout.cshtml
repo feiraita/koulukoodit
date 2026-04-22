@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Phase7</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Phase7.styles.css" asp-append-version="true" />
+</head>
+    <body>
+        <div class="wrap">
+            @if (!User.Identity.IsAuthenticated) {
+                <header class="text-white d-flex justify-content-center w-100">
+                    <h1 class="display-1">
+                        <a class="nav-link" asp-controller="Login" asp-action="Index">Financing</a>
+                    </h1>
+                </header>
+            } else { 
+                <!-- Mobiili -->
+                <header class="text-white px-2 mb-3 d-block d-md-none">
+                    <div class="row">
+                        <div class="col user">
+                            <h1 class="mt-2 mb-0"><a class="nav-link" asp-controller="Login" asp-action="Index">Financing</a></h1>
+                            <p class="mt-0">Hello, @User.Identity.Name !</p>
+                        </div>
+                        <div class="col d-flex align-self-center justify-content-end">
+                            <form asp-controller="Login" asp-action="Logout" method="post">
+                                <button type="submit" class="btn btn-logout ms-2">Logout</button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+      
+                <!--Desktop-->
+                <header class="text-white px-2 mt-2 mb-3 d-none d-md-block d-lg-none">
+                    <div class="user d-flex justify-content-between align-items-start w-100"> 
+                        <div class="d-flex align-items-end">
+                            <div class="row d-none d-md-block d-lg-none">
+                                <div class="col user">
+                                    <h1>
+                                        <a class="nav-link" asp-controller="Login" asp-action="Index">Financing</a>
+                                    </h1>
+                                    <p class="mt-0">Hello, @User.Identity.Name !</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column align-items-end mt-2">
+                            <form asp-controller="Login" asp-action="Logout" method="post" class="mb-2">
+                                <button type="submit" class="btn btn-logout">Logout</button>
+                            </form>
+
+                            <div class="d-flex align-items-end">
+                                <a class="nav-link px-2" asp-controller="Pages" asp-action="Index">Overview</a>
+                                <a class="nav-link px-2" asp-controller="Pages" asp-action="Budgets">Budgets</a>
+                                <a class="nav-link px-2" asp-controller="Pages" asp-action="Savings">Savings</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </header>
+
+                <header class="text-white px-2 mt-2 mb-3 d-none d-lg-block">
+                    <div class="user d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <h1 class="mb-0">
+                                <a class="nav-link p-0" asp-controller="Login" asp-action="Index">Financing</a>
+                            </h1>
+                            <p class="mb-0 ps-3">Hello, @User.Identity.Name !</p>
+                        </div>
+
+                        <div class="d-flex align-items-center ms-2">
+                            <a class="nav-link px-2" asp-controller="Pages" asp-action="Index">Overview</a>
+                            <a class="nav-link px-2" asp-controller="Pages" asp-action="Budgets">Budgets</a>
+                            <a class="nav-link px-2" asp-controller="Pages" asp-action="Savings">Savings</a>
+                            <form asp-controller="Login" asp-action="Logout" method="post">
+                        <button type="submit" class="btn btn-logout ms-2">Logout</button>
+                    </form>
+                        </div>
+                    </div>
+                </header>
+            }
+
+        <div class="container-fluid">
+            <div class="row justify-content-md-start">
+                <main role="main" class="pb-3">
+                    @if (TempData["OverLimit"] != null) {
+                        <div class="alert alert-warning">
+                            @TempData["OverLimit"]
+                        </div>
+                    }
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>
+
+    @if (User.Identity.IsAuthenticated) {
+        <footer class="mt-4 fixed-bottom text-white d-md-none d-block">
+            <div class="text-center p-1">
+                <p class="d-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="20px" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <a class="nav-link" asp-controller="Pages" asp-action="Budgets">Budgets</a>
+                </p>
+                    <p class="d-inline-block px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="20px" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <a class="nav-link" asp-controller="Pages" asp-action="Index">Overview</a>
+                </p>
+                    <p class="d-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="20px" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <a class="nav-link" asp-controller="Pages" asp-action="Savings">Savings</a>
+                </p>
+            </div>
+        </footer>
+    }
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Welcome Page";
+}
+
+@model Phase7.Models.ViewModels.Auth.AuthViewModel
+
+<div class="row justify-content-center">
+    <div class="col-8 col-md-6 col-lg-4">
+        <div class="pt-3 content  ">
+            @if (Context.Request.Query["ReturnUrl"].Count > 0) {
+                <div class="alert alert-warning">
+                    You must log in to access that page
+                </div>
+            }
+            <div class="login-card card shadow mb-3 w-100">
+                <ul class="nav nav-tabs nav-fill d-flex justify-content-evenly">
+                    <li class="nav-item">
+                        <p class="nav-link text-white active login" aria-current="page" href="#login" id="login-tab" data-bs-toggle="tab" role="tab" aria-controls="login" aria-selected="true">Login</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link text-white register" href="#register" id="register-tab" data-bs-toggle="tab" role="tab" aria-controls="register" aria-selected="false">Register</p>
+                    </li>
+                </ul>
+       
+                <div class="card-body">
+                    <div class="tab-content" id="myTabContent">
+
+                        <div class="tab-pane fade show active" role="tabpanel" id="login" aria-labelledby="login-tab">
+                             <h3 class="card-title py-3 text-center">Sign in!</h3>
+                            <form asp-controller="Login" asp-action="Login" method="post">
+                                @Html.AntiForgeryToken()
+                                <div class="form-group">
+                                    <label asp-for="Login.username" class="col-form-label label-control"></label>
+                                    <input asp-for="Login.username" class="form-control" />
+                                    <span asp-validation-for="Login.username" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Login.password" class="col-form-label label-control"></label>
+                                    <input asp-for="Login.password" class="form-control" />
+                                     <span asp-validation-for="Login.password" class="text-danger"></span>
+                                </div>
+                                <div class="form-group d-flex justify-content">
+                                    <button type="submit" class="btn btn-custom-lg">Login</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" role="tabpanel" id="register" aria-labelledby="register-tab">
+                            <h3 class="card-title py-3 text-center">Sign up!</h3>
+                            <form asp-controller="Login" asp-action="Register" method="post">
+                                @Html.AntiForgeryToken()
+                                <div class="form-group">
+                                    <label asp-for="Register.username" class="col-form-label label-control"></label> <p class="required">*</p>
+                                    <input asp-for="Register.username" class="form-control" />
+                                    <span asp-validation-for="Register.username" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Register.pass" class="col-form-label label-control"></label> <p class="required">*</p>
+                                    <input asp-for="Register.pass" type="password" class="form-control" />
+                                    <span asp-validation-for="Register.pass" class="text-danger"></span>
+                                </div>
+                                 <div class="form-group">
+                                    <label asp-for="Register.word" class="col-form-label label-control"></label> <p class="required">*</p>
+                                    <input asp-for="Register.word" type="password" class="form-control" />
+                                     <span asp-validation-for="Register.word" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-custom-lg">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (!ViewData.ModelState.IsValid) {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loginErrors = false;
+            const registerErrors = false;
+
+            @foreach (var state in ViewData.ModelState) {
+                if (state.Key.StartsWith("Login")) { <p>loginErrors = true;</p> }
+
+                if (state.Key.StartsWith("Register")) { <p>registerErrors = true;</p> }
+            }
+
+            if (hasRegisterErrors) {
+                new bootstrap.Tab(document.querySelector('#register-tab')).show();
+            }
+            else if (hasLoginErrors) {
+                new bootstrap.Tab(document.querySelector('#login-tab')).show();
+            }
+        });
+    </script>
+}

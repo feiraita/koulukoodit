@@ -1,0 +1,630 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\feira\\source\\repos\\Phase7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\upcomingevents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\upcomingevents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\savingsopen.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\savingsopen.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\savings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\savings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\budgetsopen.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\budgetsopen.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\budgets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\budgets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_withdrawfromsaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_withdrawfromsaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_editsaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_editsaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_editincome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_editincome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_editcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_editcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_addtosaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_addtosaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_addexpense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_addexpense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_addincome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_addincome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\auth\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\auth\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\manipulators\\databasemanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\manipulators\\databasemanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\expenseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\expenseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\incomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\incomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\savinggoalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\savinggoalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\transactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\transactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\pages\\_createsaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\pages\\_createsaving.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\phase7.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:phase7.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\savinggoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\savinggoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|c:\\users\\feira\\source\\repos\\phase7\\models\\viewmodels\\auth\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F49A4D-5F89-190E-309F-ACEBA375F43E}|Phase7.csproj|solutionrelative:models\\viewmodels\\auth\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_WithdrawFromSaving.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_WithdrawFromSaving.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_WithdrawFromSaving.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_WithdrawFromSaving.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_WithdrawFromSaving.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:53:50.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Budgets.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\Budgets.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\Budgets.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\Budgets.cshtml",
+              "RelativeToolTip": "Views\\Pages\\Budgets.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T11:01:23.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BudgetsOpen.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\BudgetsOpen.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\BudgetsOpen.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\BudgetsOpen.cshtml",
+              "RelativeToolTip": "Views\\Pages\\BudgetsOpen.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T11:32:48.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Views\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T07:56:09.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Savings.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\Savings.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\Savings.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\Savings.cshtml",
+              "RelativeToolTip": "Views\\Pages\\Savings.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T08:07:32.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SavingsOpen.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\SavingsOpen.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\SavingsOpen.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\SavingsOpen.cshtml",
+              "RelativeToolTip": "Views\\Pages\\SavingsOpen.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:59:29.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpcomingEvents.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\UpcomingEvents.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\UpcomingEvents.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\UpcomingEvents.cshtml",
+              "RelativeToolTip": "Views\\Pages\\UpcomingEvents.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T12:31:04.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_EditSaving.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_EditSaving.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_EditSaving.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_EditSaving.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_EditSaving.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:58:56.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_EditIncome.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_EditIncome.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_EditIncome.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_EditIncome.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_EditIncome.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T12:31:26.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_EditCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_EditCategory.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_EditCategory.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_EditCategory.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_EditCategory.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T11:00:05.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_AddToSaving.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddToSaving.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_AddToSaving.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddToSaving.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_AddToSaving.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:41:08.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_AddCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddCategory.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_AddCategory.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddCategory.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_AddCategory.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T11:49:20.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_AddExpense.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddExpense.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_AddExpense.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddExpense.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_AddExpense.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T10:40:55.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_AddIncome.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddIncome.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_AddIncome.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_AddIncome.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_AddIncome.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T10:56:59.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PagesController.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Controllers\\PagesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PagesController.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Controllers\\PagesController.cs",
+              "RelativeToolTip": "Controllers\\PagesController.cs",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAkwD4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:13:33.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\Auth\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\Auth\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\Auth\\RegisterViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\Auth\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:16:06.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:13:12.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DatabaseManipulator.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Manipulators\\DatabaseManipulator.cs",
+              "RelativeDocumentMoniker": "Models\\Manipulators\\DatabaseManipulator.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Manipulators\\DatabaseManipulator.cs",
+              "RelativeToolTip": "Models\\Manipulators\\DatabaseManipulator.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T08:01:32.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T08:03:05.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CategoryViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\CategoryViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\CategoryViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\CategoryViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\CategoryViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:30:18.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvzIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T12:37:57.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T07:25:29.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BudgetViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\BudgetViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\BudgetViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\BudgetViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\BudgetViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:30:21.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ExpenseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\ExpenseViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\ExpenseViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\ExpenseViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\ExpenseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T08:24:39.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IncomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\IncomeViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\IncomeViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\IncomeViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\IncomeViewModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvxsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:30:35.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SavingGoalViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\SavingGoalViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\SavingGoalViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\SavingGoalViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\SavingGoalViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T14:00:13.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TransactionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\TransactionViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\TransactionViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\TransactionViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\TransactionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T12:22:46.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_CreateSaving.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_CreateSaving.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pages\\_CreateSaving.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Pages\\_CreateSaving.cshtml",
+              "RelativeToolTip": "Views\\Pages\\_CreateSaving.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T08:07:57.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAH4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T07:55:59.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Phase7",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Phase7.csproj",
+              "RelativeDocumentMoniker": "Phase7.csproj",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Phase7.csproj",
+              "RelativeToolTip": "Phase7.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-17T14:19:47.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "Models\\Expense.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Expense.cs",
+              "RelativeToolTip": "Models\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T10:25:39.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Income.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Income.cs",
+              "RelativeDocumentMoniker": "Models\\Income.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\Income.cs",
+              "RelativeToolTip": "Models\\Income.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T12:55:26.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T14:12:12.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "SavingGoal.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\SavingGoal.cs",
+              "RelativeDocumentMoniker": "Models\\SavingGoal.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\SavingGoal.cs",
+              "RelativeToolTip": "Models\\SavingGoal.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:53:25.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIA5wAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:28:39.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-16T07:43:40.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\Auth\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\Auth\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\feira\\source\\repos\\Phase7\\Models\\ViewModels\\Auth\\LoginViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\Auth\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T07:16:04.521Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

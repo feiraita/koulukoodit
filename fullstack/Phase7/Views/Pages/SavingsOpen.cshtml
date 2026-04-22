@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Savings Tab";
+}
+@using Phase7.Models.ViewModels
+@model SavingGoalViewModel
+
+<div class="col-10 col-lg-6 col-xl-4 mx-auto">
+    <div class="py-4 d-flex justify-content-between">
+        <a role="button" href="/Pages/Savings" class="w-25 btn btn-custom-back">Go Back</a>
+         <button type="button" class="w-25 btn openModal-btn btn-custom-back" 
+                 data-target="_EditSaving" data-id="@Model.savingID" data-title="Edit a Saving">Edit</button>
+    </div>
+
+    <div class="card shadow w-100">
+        <div class="card-header">
+            <h4 class=" mb-0">@Model.name</h4>
+            <p class="mb-0">Total: @Model.total / @Model.goal €</p>
+            <div class="pb-2 d-flex justify-content-between">
+                @if(@Model.recurring == true) {
+                    <p class="mb-0">Payments monthly: @Model.payments €</p>
+                } else {
+                    <p class="mb-0">No recurring payments</p>
+                }
+            </div>
+        </div>
+        
+        <div class="card-body">
+            <h5 class="mb-0">Transaction History</h5>
+            <div class="d-flex justify-content-between">
+                <p class="mb-0">10 July 2025</p>
+                <p class="mb-0">+2€</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modaali delete-->
+<div class="modal" id="myModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle"></h5>
+                <button type="button" class="btn-close" 
+                data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+$(".openModal-btn").on("click", function () {
+    var target = $(this).data("target");
+    var id = $(this).data("id");
+    var title = $(this).data("title");
+
+    $.ajax({
+        type: 'GET',
+        url: '/Pages/' + target,
+        data: { id: id, title: title },
+        success: function (result) {
+            $("#modalBody").html(result);
+            $("#modalTitle").text(title);
+
+            var modal = new bootstrap.Modal(document.getElementById('myModal'));
+            modal.show();
+          
+            function toggleAmount() {
+                const value = $(".recurringList").val();
+
+                if (value === "true") {
+                    $("#recurringGroup").show();
+                } else {
+                    $("#recurringGroup").hide();
+                }
+            }
+            toggleAmount();
+            $(document).on("change", "#recurring", toggleAmount);
+        },
+        error: function () {
+            alert("Failed to load partial view.");
+        }
+     });
+});
+</script>
+}

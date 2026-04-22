@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Add to Saving";
+}
+
+@using Phase7.Models.ViewModels
+@model SavingGoalViewModel
+
+<div class="pt-3 content d-flex text-black justify-content-center">
+    <form class="w-75" id="addToSavingForm" asp-controller="Pages" asp-action="_AddToSaving" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label asp-for="savingID" class="label-control"></label>
+            <select asp-for="savingID"
+                    asp-items="Model.SavingGoalsList" class="form-select">
+                <option value="">-- Select saving goal --</option>
+            </select>
+            <small class="form-text text-muted">Select the saving goal you want to add to</small>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="amount" class="label-control"></label>
+            <input asp-for="amount" class="form-control" />
+            <small class="form-text text-muted">Total amount you want to add to the selected saving goal</small>
+            <span asp-validation-for="amount" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-flex justify-content-end">
+            <button type="submit" class="btn btn-custom-sm w-25">Add</button>
+        </div>
+    </form>
+</div>

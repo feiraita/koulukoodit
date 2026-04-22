@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Edit Income Page";
+}
+
+@using Phase7.Models.ViewModels
+@model IncomeViewModel
+
+<div class="pt-3 content d-flex text-black justify-content-center">
+    @Html.AntiForgeryToken()
+    <form class="w-75" id="incomeForm">
+        <div class="form-group">
+            <label asp-for="name" class="label-control"></label>
+            <input asp-for="name" class="form-control" />
+            <small class="form-text text-muted">e.g. salary or gift</small>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="amount" class="label-control"></label>
+            <input asp-for="amount" class="form-control" />
+            <small class="form-text text-muted">Enter the amount received</small>
+            <span asp-validation-for="amount" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+           <label asp-for="date" class="label-control"></label>
+            <input asp-for="date" type="date" asp-format="{0: dd-MM-yyyy}" class="form-control" /> 
+            <small class="form-text text-muted">When did you recieve the payments</small>
+            <span asp-validation-for="date" class="text-danger"></span>
+        </div>
+
+         <div class="form-group">
+            @{
+                var recurringList = new SelectList(
+                    new List<SelectListItem> {
+                        new SelectListItem {Text = "Never repeat", Value = "never-repeat"},
+                        new SelectListItem {Text = "Every week", Value = "every-week"},
+                        new SelectListItem {Text = "Every month", Value = "every-month"},
+                    }, "Value", "Text");
+            }
+            <label asp-for="recurring" class="label-control"></label>
+            @Html.DropDownListFor(m => m.recurring, recurringList, "- Select -", new { @class="form-control" })
+             <small class="form-text text-muted">Where do you want the income?</small>
+        </div>
+
+        <div class="form-group d-flex justify-content-between">
+            <button type="submit" class="btn btn-custom-sm">Delete</button>
+            <button type="submit" class="btn btn-custom-sm">Save</button>
+        </div>
+    </form>
+</div>
