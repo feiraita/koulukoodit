@@ -1,0 +1,16 @@
+﻿@using BlazorCoreHybrid.Components
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Blazor MVC Hybrid</h1>
+    <component type="typeof(Counter)" render-mode="Server"/>
+</div>
+
+<!--
+    1. Program.cs laitettiin builder.Services.AddServerSideBlazor()
+    2. Programmiin app.MapBlazorHub
+    3. _Imports.razor kopiointi oikeasta blazor projektista
+    4. _Layout.cshtml pohjalle blazor server.js + base määrittely
+-->

@@ -1,0 +1,74 @@
+﻿@page "/todo"
+@using BlazorCoreHybrid.Manipulators
+@using BlazorCoreHybrid.Models
+@rendermode InteractiveServer
+
+<h1>To Do List</h1>
+
+<form @onsubmit="AddTodo">
+    @if (tempText != null) {
+        <p>
+            <code>@tempText</code>
+        </p>
+    }
+    <input @bind="newTodo" />
+    <button type="submit">Add</button>
+</form>
+
+@if (todoList.Count == 0) {
+    <p>Tyhjä</p>
+} else {
+    <table>
+        <thead>
+            <tr>
+                <th>Todo</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var todo in todoList) {
+                <tr>
+                    <td>@todo.Text</td>
+                    <td>
+                        <input type="checkbox" @bind="todo.IsDone" @bind:after="() => UpdateTodo(todo)" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    private List<BlazorCoreHybrid.Models.Todo> todoList = new();
+    private string? newTodo;
+    private string? tempText;
+    private bool IsDone;
+
+    [Parameter]
+    public bool AutoLoad { get; set; }
+
+    protected override void OnInitialized() {
+        /* if(AutoLoad){ LoadItems(); }*/
+        todoList = DatabaseManipulator.GetAll<Todo>();
+    }
+
+    private void AddTodo() {
+        if (string.IsNullOrWhiteSpace(newTodo))
+            return;
+
+        DatabaseManipulator.SaveTodo(newTodo) {
+            if (newTodo != null) {
+                todoList.Add(DatabaseManipulator.SaveTodo(new todoList() {todo = newTodo}));
+
+            }
+            tempText = "Lisätty";
+
+            await Task.Delay(3000);
+            tempText = null;
+            StateHasChanged();
+        }
+    }
+
+    private void UpdateTodo(Todo todo) {
+        DatabaseManipulator.SaveTodo(todo);
+    }
+}
