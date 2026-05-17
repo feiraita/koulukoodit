@@ -1,0 +1,95 @@
+﻿@using Moodry.Models.ViewModels
+@using System.Globalization
+@model CalendarViewModel
+
+<input type="hidden" id="currentMonth" value="@Model.ObservableMonth" />
+
+<div id="calendar-day-container">
+    <p class="text-center m-0">@DateTime.Now.Year</p>
+    <div class="d-flex align-items-center justify-content-between px-2 mb-3">
+        <input type="button" class="btn btn-custom-next" value="<" onclick="PrevMonth()" />
+        <h3 class="mb-0 text-center flex-grow-1">@Model.MonthName</h3>
+        <input type="button" class="btn btn-custom-next" value=">" onclick="NextMonth()" />
+    </div>
+    
+    <div class="calendar-row">
+        <p class="calendar-heading">Mon</p>
+        <p class="calendar-heading">Tue</p>
+        <p class="calendar-heading">Wed</p>
+        <p class="calendar-heading">Thu</p>
+        <p class="calendar-heading">Fri</p>
+        <p class="calendar-heading">Sat</p>
+        <p class="calendar-heading">Sun</p>
+    </div>
+
+    @foreach(var week in Model.datesPerWeek) {
+        <div class="calendar-row">
+            @foreach(var day in week) {
+                var isCurrentMonth = day.Month == Model.ObservableMonth;
+                var moodClass = isCurrentMonth ? Model.GetMoodColorClass(day) : "no-entry";
+                var hasEntry = isCurrentMonth && Model.DailyMoodScores.ContainsKey(day);
+                var dateString = day.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            
+                <div onclick="HandleDayClick('@dateString', @hasEntry.ToString().ToLower())" 
+                     class="calendar-day @(!isCurrentMonth ? "not-this-month" : "") @moodClass">
+                    <div class="calendar-day-content">
+                        <p class="day-number">@day.ToString("dd", CultureInfo.InvariantCulture)</p>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function GetCurrentMonth() { return Number($("#currentMonth").val()); }
+        
+        function NextMonth(){
+            var current = GetCurrentMonth();
+            current = current + 1;
+
+            if(current == 13) { current = 1; }
+
+            RenderCalendar(current);
+        }
+
+        function PrevMonth(){
+            var current = GetCurrentMonth();
+            current = current - 1;
+
+            if(current == 0) { current = 12; }
+
+            RenderCalendar(current);
+        }
+
+        function RenderCalendar(month){
+            $.ajax({
+                type: 'get',
+                url: "/Home/_Calendar?month=" + month,
+                success: function(data){
+                    $("#calender").html(data);
+                }
+            })
+        }
+
+        // avaa selected day - ei toimi
+       function HandleDayClick(dateString, hasEntry) {
+            console.log("Day clicked:", dateString, "Has entry:", hasEntry);
+    
+            if (hasEntry) {
+                var dateParts = dateString.split('-');
+                var year = parseInt(dateParts[0]);
+                var month = parseInt(dateParts[1]);
+                var day = parseInt(dateParts[2]);
+        
+                
+                window.location.href = '/Home/EntriesOpen?year=' + year + '&month=' + month + '&day=' + day;
+            } else {
+                window.location.href = '/Home/Mood?date=' + dateString;
+            }
+        }
+
+        RenderCalendar(GetCurrentMonth());
+    </script>
+}

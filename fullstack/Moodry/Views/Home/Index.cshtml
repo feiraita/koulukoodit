@@ -1,0 +1,213 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="col-10 col-lg-8 col-xxl-6 mx-auto">
+
+    <div class="row">
+        <div class="p-0 col-12 col-md-4">
+            <h5 class="card-subtitle pb-2">Logged days</h5>
+            <p>Click on any day to explore or update your logs.</p>
+        </div>
+        <div class="p-0 col-12 col-md-8">
+            <div class="p-1 card shadow-md d-flex justify-content-center rounded bg-light" id="calender"></div>
+        </div>
+    </div>
+
+    <div class="row py-3">
+        <div class="p-0 col-12 col-md-4">
+            <h5 class="card-subtitle pb-2">Mood counter</h5>
+            <p>Hover over a mood to see related activities.</p>
+        </div>
+        <div class="p-0 col-12 col-md">
+            <div class="card shadow-md d-flex justify-content-center p-4 rounded bg-light">
+                <div class="row text-center">
+                    <div class="col-3 mood-stat" data-mood="content">
+                        <img src="~/icons/moods/content.svg" class="mood-icon" />
+                        <div>
+                            <small class="text-muted d-block">Content</small>
+                            <strong id="content-count">0</strong>
+                        </div>
+                    </div>
+                    <div class="col-3 mood-stat" data-mood="smile">
+                        <img src="~/icons/moods/smile.svg" class="mood-icon" />
+                        <div>
+                            <small class="text-muted d-block">Smile</small>
+                            <strong id="smile-count">0</strong>
+                        </div>
+                    </div>
+                    <div class="col-3 mood-stat" data-mood="neutral">
+                        <img src="~/icons/moods/neutral.svg" class="mood-icon" />
+                        <div>
+                            <small class="text-muted d-block">Neutral</small>
+                            <strong id="neutral-count">0</strong>
+                        </div>
+                    </div>
+                    <div class="col-3 mood-stat" data-mood="sad">
+                        <img src="~/icons/moods/sad.svg" class="mood-icon" />
+                        <div>
+                            <small class="text-muted d-block">Sad</small>
+                            <strong id="sad-count">0</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-3">
+        <div class="p-0 col-12 col-md-4">
+            <h5 class="card-subtitle pb-2">Activity counter</h5>
+            <p>View your most frequently logged activities.</p>
+        </div>
+        <div class="p-0 col-12 col-md">
+            <div class="card shadow-md d-flex justify-content-center p-4 rounded bg-light">
+                <div id="top-activities" class="text-center">
+                    <p class="text-muted">Loading activities...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Tooltip -->
+<div id="mood-tooltip" class="mood-tooltip">
+    <div class="tooltip-header">
+        Top 3 activities for <span id="tooltip-mood-name"></span>
+    </div>
+    <div id="tooltip-activities-list"></div>
+</div>
+
+@section Scripts{
+    <script>
+        function HandleDayClick(dateString, hasEntry) {
+            console.log("Day clicked:", dateString, "Has entry:", hasEntry);
+            
+            if (hasEntry) {
+                var dateParts = dateString.split('-');
+                var year = parseInt(dateParts[0]);
+                var month = parseInt(dateParts[1]);
+                window.location.href = '/Home/EntriesOpen?year=' + year + '&month=' + month;
+            } else {
+                window.location.href = '/Home/Mood?date=' + dateString;
+            }
+        }
+
+        $(document).ready(function() {
+            LoadStatistics();
+            SetupMoodTooltips();
+        });
+
+        function LoadStatistics() {
+            $.ajax({
+                type: 'get',
+                url: '/Home/GetStatistics',
+                success: function(data) {
+                    $('#content-count').text(data.moodCounts.content);
+                    $('#smile-count').text(data.moodCounts.smile);
+                    $('#neutral-count').text(data.moodCounts.neutral);
+                    $('#sad-count').text(data.moodCounts.sad);
+                    
+                    window.moodActivitiesData = data.moodActivities;
+                    
+                    if (data.topActivities && data.topActivities.length > 0) {
+                        var html = '<div class="row">';
+                        for (var i = 0; i < data.topActivities.length; i++) {
+                            var activity = data.topActivities[i];
+                            html += '<div class="col-3 text-center">';
+                            html += '<img src="/icons/activities/' + activity.svg + '" class="activity-icon" onerror="this.src=\'/icons/activities/default.svg\'" />';
+                            html += '<div>';
+                            html += '<small class="text-muted d-block">' + activity.title + '</small>';
+                            html += '<strong>' + activity.count + '</strong>';
+                            html += '</div></div>';
+                        }
+                        html += '</div>';
+                        $('#top-activities').html(html);
+                    } else { $('#top-activities').html('<p class="text-muted">Create entries to see your top activities.</p>'); }
+                }
+            });
+        }
+
+        function SetupMoodTooltips() {
+            var tooltip = $('#mood-tooltip');
+            var hideTimeout;
+            
+            $('.mood-stat').on('mouseenter', function(e) {
+                var mood = $(this).data('mood');
+                var moodName = mood.charAt(0).toUpperCase() + mood.slice(1);
+                
+                if (hideTimeout) { clearTimeout(hideTimeout); }
+                
+                var activities = window.moodActivitiesData[mood];
+                
+                if (activities && activities.length > 0) {
+                    $('#tooltip-mood-name').text(moodName);
+                    var activitiesHtml = '';
+                    
+                    for (var i = 0; i < Math.min(activities.length, 3); i++) {
+                        var act = activities[i];
+                        activitiesHtml += '<div class="tooltip-activity-item">';
+                        activitiesHtml += '<img src="/icons/activities/' + act.svg + '" class="tooltip-activity-icon" onerror="this.src=\'/icons/activities/default.svg\'" />';
+                        activitiesHtml += '<span class="tooltip-activity-name">' + act.title + '</span>';
+                        activitiesHtml += '<span class="tooltip-activity-count">' + act.count + 'x</span>';
+                        activitiesHtml += '</div>';
+                    }
+                    
+                    $('#tooltip-activities-list').html(activitiesHtml);
+                } else { $('#tooltip-activities-list').html('<div class="no-activities">No activities with this mood yet</div>'); }
+                
+                var offset = $(this).offset();
+                tooltip.css({
+                    display: 'block',
+                    top: offset.top - tooltip.outerHeight() - 10,
+                    left: offset.left + ($(this).outerWidth() / 2) - (tooltip.outerWidth() / 2)
+                });
+            });
+            
+            $('.mood-stat').on('mouseleave', function() {
+                hideTimeout = setTimeout(function() {
+                    tooltip.hide();
+                }, 200);
+            });
+            
+            tooltip.on('mouseenter', function() {
+                if (hideTimeout)  { clearTimeout(hideTimeout); }
+            });
+            
+            tooltip.on('mouseleave', function() { tooltip.hide(); });
+        }
+
+        function GetCurrentMonth() { return Number($("#currentMonth").val()); }
+        
+        function NextMonth() {
+            var current = GetCurrentMonth();
+            current = current + 1;
+
+            if(current == 13) { current = 1; }
+
+            RenderCalendar(current);
+        }
+
+        function PrevMonth() {
+            var current = GetCurrentMonth();
+            current = current - 1;
+
+            if(current == 0) { current = 12; }
+
+            RenderCalendar(current);
+        }
+
+        function RenderCalendar(month) {
+            $.ajax({
+                type: 'get',
+                url: "/Home/_Calendar?month=" + month,
+                success: function(data) {
+                    $("#calender").html(data);
+                }
+            })
+        }
+
+        RenderCalendar(GetCurrentMonth());
+    </script>
+}

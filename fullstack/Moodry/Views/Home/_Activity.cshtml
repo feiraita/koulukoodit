@@ -1,0 +1,31 @@
+﻿@using Moodry.Models.ViewModels
+@model EntryViewModel
+
+<div class="w-100">
+    <h5 class="card-subtitle text-center fw-semibold">What have you been up to?</h5>		
+    <hr />
+
+    <div class="d-flex justify-content-center">
+        <div class="activities-scroll" id="h-scroll">
+            @foreach (var activity in Model.Activity.activities) {
+                <label class="activity">
+                    <input type="checkbox" name="Activity.selectedActivities" value="@activity._id.ToString()" hidden />
+                    <span class="icon">
+                        <img src="~/icons/activities/@activity.svg" />
+                    </span>
+                    @activity.title
+                </label>
+            }
+        </div>
+    </div>
+    <span asp-validation-for="Activity.selectedActivities" class="text-danger d-block"></span>
+
+    <div class="form-group mt-3">
+        <input asp-for="Activity.customActivity" class="form-control describe" placeholder="Or type it (optional)" />
+    </div>   
+
+    <div class="form-group mt-4 d-flex justify-content-between">
+        <button type="button" class="btn btn-custom-back previous">Previous</button>
+        <button type="button" class="btn btn-custom-next w-25 next">Next</button>
+    </div>
+</div>

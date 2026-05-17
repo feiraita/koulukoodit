@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Entries Page";
+    var selectedYear = ViewBag.SelectedYear as int? ?? DateTime.Now.Year;
+}
+@using Moodry.Models.ViewModels
+@model EntriesViewModel
+
+<div class="col-10 col-md-8 col-lg-6 mx-auto">
+    <h2 class="text-center">Entries</h2>
+    <div class="form-group d-flex justify-content-center">
+        <select class="form-select mb-3 w-25" id="yearSelect">
+            @if (Model.AvailableYears != null && Model.AvailableYears.Any()) {
+                foreach (var year in Model.AvailableYears) {
+                    if (year == selectedYear) { <option value="@year" selected>@year</option> } 
+                    else { <option value="@year">@year</option> }
+                }
+            } else { <option value="@DateTime.Now.Year" selected>@DateTime.Now.Year</option> }
+        </select>
+    </div>
+    
+    @if (Model.Entries != null && Model.Entries.Any()) {
+        var groupedByMonth = Model.Entries
+            .Where(e => {
+                DateTime.TryParse(e.entryDate, out DateTime date);
+                return date.Year == selectedYear;
+            })
+            .GroupBy(e => {
+                DateTime.TryParse(e.entryDate, out DateTime date);
+                return new { date.Year, date.Month };
+            })
+            .OrderByDescending(g => g.Key.Month);
+        
+        foreach (var monthGroup in groupedByMonth) {
+            var monthName = new DateTime(monthGroup.Key.Year, monthGroup.Key.Month, 1).ToString("MMMM");
+            var entryCount = monthGroup.Count();
+            
+            <div class="card my-4 shadow-md rounded bg-light">
+                <a class="nav-link" asp-controller="Home" asp-action="EntriesOpen" asp-route-year="@monthGroup.Key.Year" asp-route-month="@monthGroup.Key.Month">
+                    <div class="px-3 pt-2 d-flex justify-content-between">
+                        <h5>@monthName</h5>
+                        @if(@entryCount == 1) { <p>@entryCount Entry total</p> } 
+                        else { <p>@entryCount Entries total</p> }
+                    </div>
+                </a>
+            </div>
+        }
+    } else {
+        <div class="text-center py-5">
+            <p>No entries for @selectedYear. Create your first entry!</p>
+            <a asp-action="Mood" class="btn btn-custom-next">Create Entry</a>
+        </div>
+    }
+</div>
+
+<script>
+    document.getElementById('yearSelect').addEventListener('change', function() {
+        var selectedYear = this.value;
+        window.location.href = '/Home/Entries?year=' + selectedYear;
+    });
+</script>

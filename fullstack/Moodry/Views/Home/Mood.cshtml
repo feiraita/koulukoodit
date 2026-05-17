@@ -1,0 +1,275 @@
+﻿@{ ViewData["Title"] = "Log an Entry Page"; }
+
+@using Moodry.Models.ViewModels
+@model EntryViewModel
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10 col-lg-8 col-xxl-6 d-flex flex-column align-items-center pt-2"> 
+            <h5>Make an entry</h5>
+            <div class="wizard shadow-md p-3 rounded border">
+
+                <!-- Tabit -->
+                <ul class="nav nav-tabs justify-content-center pb-2" id="myTab" role="tablist">
+			        <li class="nav-item flex-fill" role="presentation" data-bs-toggle="tooltip" data-bs-placement="top" title="Mood">
+				        <a class="nav-link active rounded-circle mx-auto d-flex align-items-center justify-content-center" href="#mood" id="mood-tab" data-bs-toggle="tab" role="tab" aria-controls="mood" aria-selected="true" data-step="1" data-completed="false">
+					        <span>1</span>
+				        </a>
+                        <small class="d-flex align-items-center justify-content-center">Mood</small>
+			        </li>
+			        <li class="nav-item flex-fill" role="presentation" data-bs-toggle="tooltip" data-bs-placement="top" title="Activity">
+				        <a class="nav-link disabled rounded-circle mx-auto d-flex align-items-center justify-content-center" href="#activity" id="activity-tab" data-bs-toggle="tab" role="tab" aria-controls="activity" aria-selected="false" data-step="2" data-completed="false">
+					        <span>2</span>
+				        </a>
+                        <small class="d-flex align-items-center justify-content-center">Activity</small>
+			        </li>
+			        <li class="nav-item flex-fill" role="presentation" data-bs-toggle="tooltip" data-bs-placement="top" title="Notes">
+				        <a class="nav-link disabled rounded-circle mx-auto d-flex align-items-center justify-content-center" href="#notes" id="notes-tab" data-bs-toggle="tab" role="tab" aria-controls="notes" aria-selected="false" data-step="3" data-completed="false">
+					        <span>3</span>
+				        </a>
+                        <small class="d-flex align-items-center justify-content-center">Notes</small>
+			        </li>
+			        <li class="nav-item flex-fill" role="presentation" data-bs-toggle="tooltip" data-bs-placement="top" title="Submit">
+				        <a class="nav-link disabled rounded-circle mx-auto d-flex align-items-center justify-content-center" href="#submit" id="submit-tab" data-bs-toggle="tab" role="tab" aria-controls="submit" aria-selected="false" data-step="4" data-completed="false">
+					        <span>4</span>
+				        </a>
+                        <small class="d-flex align-items-center justify-content-center">Submit</small>
+			        </li>
+		        </ul>
+
+                <!-- Content-->
+                <form asp-action="Submit" method="post" id="wizardForm">
+                    <div class="tab-content px-3" id="myTabContent">
+                        <div class="tab-pane fade show active" role="tabpanel" id="mood" aria-labelledby="mood-tab">  
+                            <partial name="_Mood" model="Model"/>
+                        </div>
+
+                        <div class="tab-pane fade" role="tabpanel" id="activity" aria-labelledby="activity-tab">
+	                        <partial name="_Activity" model="Model" />
+                        </div>
+
+                        <div class="tab-pane fade" role="tabpanel" id="notes" aria-labelledby="notes-tab">
+                            <partial name="_Notes" model="Model" />
+                        </div>
+
+                        <div class="tab-pane fade" role="tabpanel" id="submit" aria-labelledby="submit-tab">
+                            <partial name="_Submit" model="Model" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    //H scroll
+    $(document).ready(function () {
+        const scrollArea = document.querySelectorAll("#h-scroll");
+        scrollArea.forEach(item => {
+            item.addEventListener("wheel", function (e) {
+                e.preventDefault();
+                item.scrollLeft += e.deltaY > 0 ? 20 : -20;
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        function getStepNumber(paneId) {
+            const steps = {
+                'mood': 1,
+                'activity': 2,
+                'notes': 3,
+                'submit': 4
+            };
+            return steps[paneId] || 0;
+        }
+
+        function markStepAsCompleted(stepNumber) { $(`.nav-link[data-step='${stepNumber}']`).attr('data-completed', 'true'); }
+
+        function enableNextTab(currentStepNumber) {
+            const nextStepNumber = currentStepNumber + 1;
+            const nextTab = $(`.nav-link[data-step='${nextStepNumber}']`);
+            if (nextTab.length && nextTab.hasClass('disabled')) { nextTab.removeClass('disabled'); }
+        }
+
+        //Mood
+        function validateMoodStep($step) {
+            var isValid = true;
+            
+            const moodSelected = $step.find("input[name='Mood.mood']:checked").length > 0;
+            if (!moodSelected) {
+                var errorSpan = $step.find(".mood-validation-error");
+                if (errorSpan.length === 0) {
+                    errorSpan = $('<span class="text-danger mood-validation-error d-block">Please select a mood</span>');
+                    $step.find(".smileys").after(errorSpan);
+                }
+                isValid = false;
+            } else { $step.find(".mood-validation-error").remove(); }
+            
+            const dateInput = $step.find("input[name='date']");
+            const timeInput = $step.find("input[name='time']");
+            
+            if (dateInput.length && !dateInput.val()) {
+                dateInput.valid();
+                isValid = false;
+            }
+            if (timeInput.length && !timeInput.val()) {
+                timeInput.valid();
+                isValid = false;
+            }
+        
+            if (isValid) {
+                markStepAsCompleted(1);
+                enableNextTab(1);
+            }
+            
+            return isValid;
+        }
+
+        //Activity
+        function validateActivityStep($step) {
+            var isValid = true;
+            
+            const activitiesSelected = $step.find("input[name='Activity.selectedActivities']:checked").length > 0;
+            const validationSpan = $step.find("[data-valmsg-for='Activity.selectedActivities']");
+            
+            if (!activitiesSelected) {
+                validationSpan.text("Please select at least one activity").show();
+                isValid = false;
+            } else { validationSpan.text("").hide(); }
+            
+            if (isValid) {
+                markStepAsCompleted(2);
+                enableNextTab(2);
+            }
+            
+            return isValid;
+        }
+        
+        //Notes
+        function validateNotesStep($step) { 
+            markStepAsCompleted(3);
+            enableNextTab(3);
+            return true; 
+        }
+
+        function validateStep($step) {
+            const stepId = $step.attr('id');
+            
+            switch(stepId) {
+                case 'mood':
+                    return validateMoodStep($step);
+                case 'activity':
+                    return validateActivityStep($step);
+                case 'notes':
+                    return validateNotesStep($step);
+                default:
+                    return true;
+            }
+        }
+
+        //Disable links
+        $('.nav-link').on('click', function(e) {
+            if ($(this).hasClass('disabled')) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                return false;
+            }
+        });
+
+        $('a[data-bs-toggle="tab"]').on('show.bs.tab', function (e) {
+            const targetStep = $(e.target).data('step');
+            const currentPane = $('.tab-pane.active');
+            const currentStep = getStepNumber(currentPane.attr('id'));
+            const isMovingForward = targetStep > currentStep;
+            
+            if ($(e.target).hasClass('disabled')) {
+                e.preventDefault();
+                return false;
+            }
+            
+            if (isMovingForward) {
+                if (!validateStep(currentPane)) {
+                    e.preventDefault();
+                    return false;
+                }
+            }
+        });
+
+        //Next
+        $(document).on("click", ".next", function(e) {
+            e.preventDefault();
+            
+            const currentPane = $('.tab-pane.active');
+            
+            if (!validateStep(currentPane)) { return; }
+            
+            const currentTab = $(".nav-tabs .active");
+            const nextTabLi = currentTab.closest("li").next("li");
+            const nextTabLink = nextTabLi.find("a");
+            
+            if (nextTabLink.length && !nextTabLink.hasClass('disabled')) {
+                const tab = new bootstrap.Tab(nextTabLink[0]);
+                tab.show();
+                
+                if (nextTabLink.data('step') === 4) { updatePreview(); }
+            }
+        });
+
+        //Prev
+        $(document).on("click", ".previous", function(e) {
+            e.preventDefault();
+            
+            const currentTab = $(".nav-tabs .active");
+            const prevTabLi = currentTab.closest("li").prev("li");
+            
+            if (prevTabLi.length) {
+                const prevTab = prevTabLi.find("a");
+                const tab = new bootstrap.Tab(prevTab[0]);
+                tab.show();
+            }
+        });
+
+        //Update submit
+        function updatePreview() {
+            const date = $("input[name='date']").val();
+            const time = $("input[name='time']").val();
+            $("#preview-datetime").text(`${date} ${time}`);
+
+            const moodDescription = $("input[name='Mood.description']").val();
+            const moodValue = $("input[name='Mood.mood']:checked").val();
+            
+            if (moodDescription && moodDescription.trim() !== "") {
+                $("#preview-mood").text(moodDescription);
+            } else { $("#preview-mood").text(moodValue); }
+
+            const notes = $("textarea[name='Notes.text']").val();
+            $("#preview-notes").text(notes && notes.trim() !== "" ? notes : "No notes");
+
+            const selected = $("input[name='Activity.selectedActivities']:checked");
+            var html = "";
+            selected.each(function () {
+                const label = $(this).closest("label");
+                const text = label.find("span").text().trim() || label.text().trim();
+                const img = label.find("img").attr("src");
+                if (img) { html += `<span class="me-2"><img src="${img}" width="24" class="me-2"/>${text}</span>`; } 
+                else { html += `<span class="me-2">${text}</span>`; }
+            });
+            
+            const customActivity = $("input[name='Activity.customActivity']").val();
+            if (customActivity && customActivity.trim() !== "") { html += `<span class="me-2"><img src="/icons/activities/default.svg" width="24"/> ${customActivity}</span>`; }
+            $("#preview-activities").html(html);
+        }
+    });
+
+    $(document).on("click", "button[type='submit']", function(e) {
+        const currentPane = $('.tab-pane.active');
+        if (currentPane.attr('id') === 'submit') { $("#wizardForm").off('submit').submit(); }
+    });
+</script>
+}

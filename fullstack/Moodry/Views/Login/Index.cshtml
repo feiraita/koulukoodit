@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+    Layout = "_AuthLayout";
+
+    bool showRegister = ViewData.ModelState.Keys.Any(k => k.StartsWith("Register"));
+    bool showLogin = !showRegister;
+}
+
+@model Moodry.Models.ViewModels.Auth.AuthViewModel
+
+<div class="pt-4 d-flex justify-content-center">
+    @if (Context.Request.Query["ReturnUrl"].Count > 0) { <div class="alert alert-warning w-25 text-center">You must log in to access that page</div> }
+</div>
+
+<div class="pt-4 col-6 col-lg-4 mx-auto">
+    <div id="login" style="display:@(showLogin ? "block" : "none")">
+        <form asp-controller="Login" asp-action="Login" method="post">
+            @Html.AntiForgeryToken()
+            <div class="login card p-5 rounded border">
+                <h3 class="pt-2 pb-4 fw-semibold text-center">Login</h3>
+
+                <div class="form-group">
+                    <label asp-for="Login.username" hidden></label>
+                    <input asp-for="Login.username" type="text" class="form-control" placeholder="Username">
+                    <span asp-validation-for="Login.username" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Login.password" hidden></label>
+                    <input asp-for="Login.password" type="password" class="form-control" placeholder="Password">
+                    <span asp-validation-for="Login.password" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group mt-2">
+                    <button type="submit" class="btn btn-custom-next w-100 fw-semibold">Sign in</button>
+                </div>
+
+                <p class="text-muted">
+                    Don't have an account?
+                    <a href="#" onclick="showTab('register'); return false;">Sign up</a> here.
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <div id="register" style="display:@(showRegister ? "block" : "none")">
+        <form asp-controller="Login" asp-action="Register" method="post">
+            @Html.AntiForgeryToken()
+            <div class="login card p-4 rounded border">
+                <h3 class="pt-2 pb-4 text-center fw-semibold">Register</h3>
+
+                <div class="form-group">
+                    <label asp-for="Register.username" hidden></label>
+                    <input asp-for="Register.username" class="form-control" placeholder="Username" />
+                    <span asp-validation-for="Register.username" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Register.pass" hidden></label>
+                    <input asp-for="Register.pass" type="password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Register.pass" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Register.word" hidden></label>
+                    <input asp-for="Register.word" type="password" class="form-control" placeholder="Confirm password" />
+                    <span asp-validation-for="Register.word" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-2">
+                    <button type="submit" class="btn btn-custom-next w-100 fw-semibold">Sign up</button>
+                </div>
+
+                <p class="text-muted">
+                    Already have an account?
+                    <a href="#" onclick="showTab('login'); return false;">Sign in</a> here.
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    function showTab(tabId) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("register").style.display = "none";
+
+        document.getElementById(tabId).style.display = "block";
+    }
+</script>
+}

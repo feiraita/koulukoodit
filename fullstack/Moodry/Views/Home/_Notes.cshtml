@@ -1,0 +1,18 @@
+﻿@using Moodry.Models.ViewModels
+@model EntryViewModel
+
+<div class="w-100">
+    <h5 class="card-subtitle text-center fw-semibold">Anything to add?</h5>
+    <hr />
+    
+    <div class="form-group">
+        <label asp-for="Notes.text" hidden></label>
+        <textarea asp-for="Notes.text" class="form-control describe desc-text" rows="5"  maxlength="150" placeholder="Write your thoughts here (optional)"></textarea>
+        <span asp-validation-for="Notes.text" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-4 d-flex justify-content-between">
+        <button type="button" class="btn btn-custom-back previous">Previous</button>
+        <button type="button" class="btn btn-custom-next w-25 next">Next</button>
+    </div>
+</div>

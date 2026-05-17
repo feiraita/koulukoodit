@@ -1,0 +1,47 @@
+﻿@using Moodry.Models.ViewModels
+@model EntryViewModel
+
+<div class="w-100">
+    <h5 class="card-subtitle text-center fw-semibold">How are you feeling?</h5>
+    <hr />
+
+    <div class="smileys pt-2 pb-3 d-flex justify-content-between">
+        <label class="mood-option">
+            <input asp-for="Mood.mood" type="radio" value="sad" hidden />
+            <img class="mood-svg" src="~/icons/moods/sad.svg" />
+        </label>
+
+        <label class="mood-option">
+            <input asp-for="Mood.mood" type="radio" value="neutral" hidden />
+            <img class="mood-svg" src="~/icons/moods/neutral.svg" />
+        </label>
+
+        <label class="mood-option">
+            <input asp-for="Mood.mood" type="radio" value="smile" hidden />
+            <img class="mood-svg" src="~/icons/moods/smile.svg" />
+        </label>
+
+        <label class="mood-option">
+            <input asp-for="Mood.mood" type="radio" value="content" hidden />
+            <img class="mood-svg" src="~/icons/moods/content.svg" />
+        </label>
+    </div>
+
+    <div class="form-group mt-2">
+        <input asp-for="Mood.description" class="form-control describe" placeholder="Describe your mood (optional)" />          
+    </div>
+    
+    <div class="form-group mt-2">
+        <input asp-for="date" type="date" class="form-control date" />
+        <span asp-validation-for="date" class="text-danger"></span>  
+    </div>
+
+    <div class="form-group mt-2">
+        <input asp-for="time" type="time" class="form-control time" />
+        <span asp-validation-for="time" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-4 d-flex justify-content-end">
+        <button type="button" class="btn btn-custom-next w-25 next">Next</button>
+    </div>
+</div>

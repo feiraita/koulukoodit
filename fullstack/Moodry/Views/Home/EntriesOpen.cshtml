@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Entries Opened Page";
+    var monthName = ViewBag.Month as string;
+    var year = ViewBag.Year;
+}
+@using Moodry.Models.ViewModels
+@model EntriesViewModel
+
+<div class="col-10 col-lg-8 col-xxl-6 mx-auto">
+    <h2 class="py-2 text-center">@monthName</h2>
+    <h5 class="text-center">@year</h5>
+
+    <div class="d-flex align-items-center mb-4">
+        <img src="~/icons/back.svg" height="20" class="me-2" />
+
+        <h5 class="mb-0">
+            <a class="nav-link p-0 m-0 fw-semibold d-inline" asp-controller="Home" asp-action="Entries">
+                Go back
+            </a>
+        </h5>
+    </div>
+
+    <div class="accordion" id="entriesAccordion">
+        @if (Model.Entries != null && Model.Entries.Any()) {
+            var groupedEntries = Model.Entries.OrderByDescending(e => e.entryDate).GroupBy(e => e.entryDate);
+            
+            @foreach (var group in groupedEntries) {
+                var dateParts = group.Key.Split('-');
+                var dateObj = new DateTime(int.Parse(dateParts[0]), int.Parse(dateParts[1]), int.Parse(dateParts[2]));
+                var averageScore = group.Average(e => e.MoodScore);
+                var averageMood = Entry.ScoreToMood(averageScore);
+                var entryCount = group.Count();
+                var orderedEntries = group.OrderBy(e => e.entryTime).ToList();
+
+                <div class="card shadow-md rounded bg-light mb-4">
+                    <button class="accordion-button collapsed d-flex flex-column flex-sm-row align-items-start align-items-sm-center" type="button" data-bs-toggle="collapse" data-bs-target="#@dateObj.ToString("ddMMyyyy")">
+                        <h5 class="mb-1 mb-sm-0 me-sm-3">@dateObj.ToString("ddd dd")</h5>
+                        <span class="d-flex align-items-center mb-1 mb-sm-0 me-sm-3">
+                            Day's average:
+                            <img class="ps-2" src="~/icons/moods/@(averageMood).svg" height="20" />
+                         </span>
+                        <p class="text-muted mb-0 ms-sm-auto">
+                            @entryCount @(entryCount == 1 ? "entry" : "entries")
+                        </p>
+                    </button>
+                    
+                    <div id="@dateObj.ToString("ddMMyyyy")" class="collapse" data-bs-parent="#entriesAccordion">
+                        <div class="card-body">
+                            @foreach (var entry in orderedEntries) {
+                                <div class="entry-item">
+                                    <div class="text-center text-md-end">
+                                        <strong>@entry.entryTime</strong>
+                                    </div>
+
+                                    <div class="row g-0 py-2">
+                                        <div class="col-12 pb-2 pb-md-0 col-md-4 text-start">
+                                            <strong>Mood:</strong>
+                                        </div>
+                                        <div class="col-12 col-md-6 text-start">
+                                            <img src="~/icons/moods/@(entry.mood).svg" width="24" class="me-1" />
+                                            <span class="me-2">@(string.IsNullOrEmpty(entry.moodDescription) ? entry.mood : entry.moodDescription)</span>
+                                        </div>
+                                    </div>
+                                    
+                                    @if (entry.ActivityIDs != null && entry.ActivityIDs.Any()) {
+                                        <div class="row g-0 py-2">
+                                            <div class="col-12 pb-2 pb-md-0 col-md-4 text-start">
+                                                <strong>Activities:</strong>
+                                            </div>
+                                            <div class="col-12 col-md-8">
+                                                @foreach (var activityId in entry.ActivityIDs) {
+                                                    if (Model.Activities.ContainsKey(activityId.ToString())) {
+                                                        var activity = Model.Activities[activityId.ToString()];
+                                                        <img src="~/icons/activities/@activity.svg" width="24" class="me-1" onerror="this.src='/icons/activities/default.svg'" />
+                                                        <span class="me-2">@activity.title</span>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    }
+                                    
+                                    <div class="row g-0 pt-2">
+                                        <div class="col-12 pb-2 pb-md-0 col-md-4 text-start">
+                                            <strong>Notes:</strong>
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <span>@(string.IsNullOrEmpty(entry.note) ? "No notes" : entry.note)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        } else {
+            <div class="text-center py-5">
+                <p>No entries yet. Create your first entry!</p>
+                <a asp-action="Mood" class="btn btn-custom-next">Create Entry</a>
+            </div>
+        }
+    </div>
+</div>
