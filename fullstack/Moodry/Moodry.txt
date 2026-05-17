@@ -1,4 +1,7 @@
 # Fullstack projekti
+GitHub linkki
+https://github.com/feiraita/koulukoodit/tree/main/fullstack/Moodry
+
 https ei toimi jostain syystä
 http://20.166.54.146
 
