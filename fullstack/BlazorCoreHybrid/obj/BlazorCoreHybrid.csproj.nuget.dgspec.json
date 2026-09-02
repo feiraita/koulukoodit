@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\feira\\source\\repos\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj": {}
+    "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\feira\\source\\repos\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj": {
+    "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\feira\\source\\repos\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj",
+        "projectUniqueName": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj",
         "projectName": "BlazorCoreHybrid",
-        "projectPath": "C:\\Users\\feira\\source\\repos\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj",
+        "projectPath": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\BlazorCoreHybrid\\BlazorCoreHybrid.csproj",
         "packagesPath": "C:\\Users\\feira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\feira\\source\\repos\\BlazorCoreHybrid\\obj\\",
+        "outputPath": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\BlazorCoreHybrid\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
@@ -55,7 +55,7 @@
             "Microsoft.AspNetCore.App.Internal.Assets": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.5, )",
+              "version": "[10.0.8, )",
               "autoReferenced": true
             },
             "MongoDB.Bson": {
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

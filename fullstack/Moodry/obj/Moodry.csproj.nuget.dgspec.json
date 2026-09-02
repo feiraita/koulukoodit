@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\feira\\source\\repos\\Moodry\\Moodry.csproj": {}
+    "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\Moodry\\Moodry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\feira\\source\\repos\\Moodry\\Moodry.csproj": {
+    "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\Moodry\\Moodry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\feira\\source\\repos\\Moodry\\Moodry.csproj",
+        "projectUniqueName": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\Moodry\\Moodry.csproj",
         "projectName": "Moodry",
-        "projectPath": "C:\\Users\\feira\\source\\repos\\Moodry\\Moodry.csproj",
+        "projectPath": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\Moodry\\Moodry.csproj",
         "packagesPath": "C:\\Users\\feira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\feira\\source\\repos\\Moodry\\obj\\",
+        "outputPath": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\Moodry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

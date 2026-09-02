@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {}
   },
@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\ViikkoT1.csproj",
+      "projectUniqueName": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\ViikkoT1\\ViikkoT1.csproj",
       "projectName": "ViikkoT1",
-      "projectPath": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\ViikkoT1.csproj",
+      "projectPath": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\ViikkoT1\\ViikkoT1.csproj",
       "packagesPath": "C:\\Users\\feira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\feira\\source\\repos\\ViikkoT1\\obj\\",
+      "outputPath": "C:\\Users\\feira\\repot\\koulukoodit\\fullstack\\ViikkoT1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,7 +52,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net10.0": {
@@ -77,7 +77,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
